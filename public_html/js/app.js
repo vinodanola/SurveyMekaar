@@ -626,6 +626,10 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
             $state.go('createsurvey.error');
             $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah -> Jika Lainnya, ketik disini'+vetd;
         }
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Luas Bagunan'+vetd;
+        }
         
         //11
         
@@ -683,6 +687,10 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
             $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah -> Jika Lainnya, ketik disini'+vetd;
         }
         
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LUAS_BANGUNAN=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Luas Bagunan'+vetd;
+        }
         else {
             
             $scope.fdSV.NIK_CREATOR = $localStorage.SESSION_LOGIN[0].nik;
