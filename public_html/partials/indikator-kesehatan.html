@@ -9,7 +9,7 @@
                     <div class="center">{{title}}</div>
                     <div class="left">
                         <ons-toolbar-button ui-sref="createsurvey">
-                            <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                            <ons-icon style="font-size:14px;vertical-align: bottom;" icon="ion-chevron-left, material:md-arrow-left"><span> Kategori</span></ons-icon>
                         </ons-toolbar-button>
                     </div>
                 </ons-toolbar>
@@ -214,6 +214,17 @@
                       </div>
                     </li>
                 </ul>
+                <br>
+                <div style="padding: 5px; text-align:center;">
+                    <button class="button--cta" ui-sref="createsurvey.datanasabah">
+                        <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                        Sebelumnya
+                    </button>
+                    <button class="button--cta" ui-sref="createsurvey.indikatorperubahanhidup">
+                        Selanjutnya
+                        <ons-icon icon="ion-chevron-right, material:md-arrow-right"></ons-icon>
+                    </button>
+                </div>
             </ons-page>
         </ons-splitter-content>
     </ons-splitter>
