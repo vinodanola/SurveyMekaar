@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget id="id.co.pnm.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
 
-    <name>Mekaar Monitoring</name>
+    <name>Survey Mekaar</name>
 
     <description>
-        Awesome Mekaar Monitoring System. Created with love.
+        Awesome Mekaar System. Created with love.
     </description>
 
     <author href="http://itd.pnm.co.id" email="vputra0920@pnm.co.id">
