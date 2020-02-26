@@ -1,0 +1,31 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="$root.historyBack()">
+                <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="center">
+        <ons-search-input class="on-top-page">
+            <input type="text" placeholder="Cari berdasarkan Nama atau ID Nasabah" class="search-input" ng-model="$root.searchNasabah" ng-model-options="{ 'debounce': 1000 }" ng-value="" />
+        </ons-search-input>
+    </div>
+    <ons-list>
+<!--        <ons-list-item tappable ng-click="setRegion('','All')">
+            <div class="left text-center">
+                <span></span>
+            </div>
+            <div class="center">
+                <span class="list-item__title">All Region</span>
+            </div>
+        </ons-list-item>-->
+        <ons-list-item tappable ng-repeat="x in nasabahs" ng-click="setNasabah(x)">
+            <div class="center">
+                <span class="list-item__title">{{x.NASABAH_NAMA}}</span>
+                <br>
+                <span class="small">{{x.NASABAH_ID}}</span>
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

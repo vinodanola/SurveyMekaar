@@ -1,0 +1,43 @@
+<ons-page class="login-page">
+    <div class="login-page-logo">
+        <img src="images/mekaar.jpeg" />
+    </div>
+    <section style="padding: 1px">
+                    <div style=" padding: 1px 0 0 0;">
+                        <div class="card" style="background: #eee;">
+                          <!--<h5>Detail Nasabah </h5>-->
+                          <div class="card__content">
+                            <ons-list>
+                                <ons-list-item>
+                                    
+                                    <div class="center">
+                                        <p>
+                                            Masuk menggunakan NIK dan tanggal lahir Anda.<br><br>
+        Contoh: <br>
+        Username         : <b>13579.03.17</b> <br>
+        Password         : <b>19950801</b> format (yyyymmdd)
+    </p>
+                                    </div>
+                                </ons-list-item>
+                            </ons-list>
+                          </div>
+                        </div>
+                    </div>
+    </section>
+    
+    <ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-header>Log in</ons-list-header>
+        <ons-list-item modifier="longdivider">
+            <input type="text" class="text-input" placeholder="Username" ng-model="username">
+        </ons-list-item>
+        <ons-list-item modifier="longdivider">
+            <input type="password" class="text-input" placeholder="Password" ng-model="password">
+        </ons-list-item>
+        <ons-list-item modifier="longdivider">
+            <ons-button ng-click="auth({ username : username , password : password })">Sign in</ons-button>
+        </ons-list-item>
+    </ons-list>
+</ons-page>
+<ons-toast var="toastLoginFailed">
+    Username or password is wrong <button ng-click="toastLoginFailed.hide()">OK</button>
+</ons-toast>

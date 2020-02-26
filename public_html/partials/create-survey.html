@@ -1,0 +1,77 @@
+<ui-view>
+    <ons-splitter var="mySplitter" id="mySplitter">
+        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                    <div class="right">
+                        <ons-toolbar-button ng-click="mySplitter.right.open();">
+                            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+<!--                    <div class="left">
+                        <ons-toolbar-button ng-click="$root.historyBack()">
+                            <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>-->
+                </ons-toolbar>
+                <ons-list>
+                    <ons-list-header>Kategori</ons-list-header>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datasurveyor">
+                        <div class="left">
+                            <ons-icon icon="fa-link"></ons-icon>
+                        </div>
+                        <div class="center">
+                            Data Surveyor
+                        </div>
+<!--                        <div class="right">
+                            (Status)
+                        </div>-->
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datanasabah">
+                        <div class="left">
+                            <ons-icon icon="fa-link"></ons-icon>
+                        </div>
+                        <div class="center">
+                            Data Nasabah
+                        </div>
+<!--                        <div class="right">
+                            (Status)
+                        </div>-->
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.indikatorkesehatan">
+                        <div class="left">
+                            <ons-icon icon="fa-link"></ons-icon>
+                        </div>
+                        <div class="center">
+                            Indikator Kesehatan
+                        </div>
+<!--                        <div class="right">
+                            (Status)
+                        </div>-->
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.indikatorperubahanhidup">
+                        <div class="left">
+                            <ons-icon icon="fa-link"></ons-icon>
+                        </div>
+                        <div class="center">
+                            Indikator Perubahan Hidup
+                        </div>
+<!--                        <div class="right">
+                            (Status)
+                        </div>-->
+                    </ons-list-item>
+                </ons-list>
+                <br>
+                <div style="padding: 5px; text-align:center;">
+                    <button class="button--cta" ng-click="setSV(fdSV)">Simpan & Keluar</button>
+                    <button class="button--cta" ui-sref="home">Batal</button>
+                </div>
+                
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+    </ui-view>

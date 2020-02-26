@@ -1,0 +1,121 @@
+<ui-view>
+    <ons-splitter var="mySplitter" id="mySplitter">
+        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                    <div class="left">
+                        <ons-toolbar-button ui-sref="createsurvey">
+                            <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+                <ons-list>
+<!--                    <ons-list-header>Filter</ons-list-header>-->
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datanasabah.regions">
+                        <div class="center">
+                            Region
+                        </div>
+                        <div class="right">
+                            {{fdSV.REGION_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datanasabah.areas">
+                        <div class="center">
+                            Area
+                        </div>
+                        <div class="right">
+                            {{fdSV.AREA_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datanasabah.branchs">
+                        <div class="center">
+                            Branch
+                        </div>
+                        <div class="right">
+                            {{fdSV.BRANCH_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datanasabah.nasabahs">
+                        <div class="center">
+                            Nasabah
+                        </div>
+                        <div class="right">
+                            {{fdSV.NASABAH_NAMA}}
+                        </div>
+                    </ons-list-item>
+                </ons-list>
+                <section style="padding: 8px" ng-show="fdSV.NASABAH_ID">
+                    <div style=" padding: 1px 0 0 0;">
+                        <div class="card" style="background: #f9f9f9;">
+                          <!--<h5>Detail Nasabah </h5>-->
+                          <div class="card__content">
+                            <ons-list>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Plafond
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_PLAFOND}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Jangka Waktu
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_JANGKA_WAKTU}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Alamat
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_ALAMAT}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Nama Kelompok
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_NAMA_KELOMPOK}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Hari Pertemuan
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_HARI_PERTEMUAN}}
+                                    </div>
+                                </ons-list-item>
+                            </ons-list>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+                <ul class="list list--material">
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Umur (tahun)</div>
+                        <div><input type="number" ng-model="fdSV.NASABAH_UMUR" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Lama Nasabah Bergabung di Mekaar (tahun)</div>
+                        <div><input type="number" ng-model="fdSV.NASABAH_LAMA_BERGABUNG" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                </ul>
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+</ui-view>
+
+

@@ -1,0 +1,480 @@
+
+    <ons-splitter var="mySplitter" id="mySplitter">
+        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                    <div class="left">
+                        <ons-toolbar-button ui-sref="createsurvey">
+                            <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+                <ul class="list list--material">
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title">5. Seberapa sering nasabah menabung <b>sebelum</b> menerima pembiayaan Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="TIDAK_MEMILIKI_TABUNGAN" class="checkbox__input" name="idkprbhhdp1">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak memiliki tabungan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="TIDAK_MENENTU_MENABUNG_JIKA_ADA_KELEBIHAN_UANG" class="checkbox__input" name="idkprbhhdp1">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak menentu (menabung jika ada kelebihan uang)
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="SABULAN_SEKALI" class="checkbox__input" name="idkprbhhdp1">
+                                <div class="checkbox__checkmark"></div>
+                                Sebulan sekali
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="MINIMAL_1_KALI_DALAM_SEMINGGU" class="checkbox__input" name="idkprbhhdp1">
+                                <div class="checkbox__checkmark"></div>
+                                Minimal 1 kali dalam seminggu
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="SETIAP_HARI" class="checkbox__input" name="idkprbhhdp1">
+                                <div class="checkbox__checkmark"></div>
+                                Setiap hari
+                            </label>
+                            <!--<div><input type="text" class="text-input" placeholder="Jika ya, sebutkan" value=""></div>-->
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title">6. Seberapa sering nasabah menabung <b>setelah</b> menerima pembiayaan Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="TIDAK_MEMILIKI_TABUNGAN" class="checkbox__input" name="idkprbhhdp2">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak memiliki tabungan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="TIDAK_MENENTU_MENABUNG_JIKA_ADA_KELEBIHAN_UANG" class="checkbox__input" name="idkprbhhdp2">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak menentu (menabung jika ada kelebihan uang)
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="SABULAN_SEKALI" class="checkbox__input" name="idkprbhhdp2">
+                                <div class="checkbox__checkmark"></div>
+                                Sebulan sekali
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="MINIMAL_1_KALI_DALAM_SEMINGGU" class="checkbox__input" name="idkprbhhdp2">
+                                <div class="checkbox__checkmark"></div>
+                                Minimal 1 kali dalam seminggu
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="SETIAP_HARI" class="checkbox__input" name="idkprbhhdp2">
+                                <div class="checkbox__checkmark"></div>
+                                Setiap hari
+                            </label>
+                            <!--<div><input type="text" class="text-input" placeholder="Jika ya, sebutkan" value=""></div>-->
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title">7. Dimana nasabah biasanya menabung <b>sebelum</b> menerima pembiayaan Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="BANK" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Bank
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="KOPERASI_LEMBAGA_SEJENIS_MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Koperasi/Lembaga sejenis Mekaar
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Mekaar
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="DISIMPAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Disimpan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="ARISAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Arisan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="DIBELIKAN_TERNAK_AYAM_SAPI_DLL" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Dibelikan ternak (ayam, sapi dll)
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="LAINNYA" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Lainnya
+                            </label>
+                            <br>
+                            <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='LAINNYA'"><input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
+<!--                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Nominal yang disisihkan untuk menabung setiap bulan
+                            </label>-->
+                            Nominal yang disisihkan untuk menabung setiap bulan
+                            <div>Rp. <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN" class="text-input" placeholder="nominal" value=""></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">8. Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="BANK" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Bank
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="KOPERASI_LEMBAGA_SEJENIS_MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Koperasi/Lembaga sejenis Mekaar
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Mekaar
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="DISIMPAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Disimpan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="ARISAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Arisan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="DIBELIKAN_TERNAK_AYAM_SAPI_DLL" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Dibelikan ternak (ayam, sapi dll)
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="LAINNYA" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <div class="checkbox__checkmark"></div>
+                                Lainnya
+                            </label>
+                            <br>
+                            <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='LAINNYA'"><input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
+<!--                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input" name="idkprbhhdp3">
+                                <div class="checkbox__checkmark"></div>
+                                Nominal yang disisihkan untuk menabung setiap bulan
+                            </label>-->
+                            Nominal yang disisihkan untuk menabung setiap bulan
+                            <div>Rp. <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN" class="text-input" placeholder="nominal" value=""></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? (Boleh diisi lebih dari satu)</div>
+                        <div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;"  value=""> Televisi
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Tanah / Ladang
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Tabungan
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Handphone
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Hewan Ternak
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Gerobak Dagang
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Perhiasan
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Lainnya
+                                <input type="text" ng-show="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA>0" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input text-input--underbar" placeholder="Jika lainnya, sebutkan" value="">
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar?</div>
+                        <div>
+                            <div style="padding: 1px 0 0 0;">
+                                <!--<div class="card">-->
+                                    <!--<div class="card__content">-->
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span >Lantai : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI=''" class="select-input select-input--material">
+                                                        <option value="TANAH_PASIR">Tanah/Pasir</option>
+                                                        <option value="BAMBU_KAYU">Bambu/Kayu</option>
+                                                        <option value="KERAMIK_UBIN">Keramik/ubin</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                            
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Dinding : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=''" class="select-input select-input--material" >
+                                                        <option value="SEMEN">Semen</option>
+                                                        <option value="BATAKO_BATA">Batako/Bata</option>
+                                                        <option value="KAYU_PAPAN">Kayu/Papan</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Atap : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI=''" class="select-input select-input--material" >
+                                                        <option value="GENTENG">Genteng</option>
+                                                        <option value="SENG_ASBES">Seng/Asbes</option>
+                                                        <option value="RUMBIA">Rumbia</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Kamar mandi : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI=''" class="select-input select-input--material" placeholder="jenis penyakit">
+                                                        <option value="MILIK_PRIBADI">Milik pribadi</option>
+                                                        <option value="WC_UMUM_JARAK_KECIL_DARI_100M">WC Umum jarak < 100 m</option>
+                                                        <option value="WC_UMUM_JARAK_BESAR_DARI_100M">WC Umum jarak > 100 m</option>
+                                                        <option value="SUNGAI">Sungai</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Akses air bersih : </span>
+                                                
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI=''" class="select-input select-input--material">
+                                                        <option value="PDAM">PDAM</option>
+                                                        <option value="SUMUR_ATAU_SUMUR_BOR">Sumur/sumur bor</option>
+                                                        <option value="MATA_AIR_SUNGAI">Mata air/sungai</option>
+                                                        <option value="BELI">Beli</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Kepemilikan rumah : </span>
+                                                
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI=''" class="select-input select-input--material" >
+                                                        <option value="MILIK_SENDIRI">Milik sendiri</option>
+                                                        <option value="MILIK_KELUARGA">Milik keluarga</option>
+                                                        <option value="MILIK_ORANG_LAIN_TANPA_SEWA">Milik orang lain tanpa sewa</option>
+                                                        <option value="MILIK_PERUSAHAAN_NEGARA">Milik perusahaan/negara</option>
+                                                        <option value="SEWA">Sewa. Biaya per bulan</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='SEWA'">
+                                                        Rp. <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI" class="text-input" placeholder="nominal" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--</div>-->
+                        <!--</div>-->
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title">11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar?</div>
+                        <div>
+                            <div style="padding: 1px 0 0 0;">
+                                <!--<div class="card">-->
+                                    <!--<div class="card__content">-->
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Lantai : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI=''" class="select-input select-input--material">
+                                                        <option value="TANAH_PASIR">Tanah/Pasir</option>
+                                                        <option value="BAMBU_KAYU">Bambu/Kayu</option>
+                                                        <option value="KERAMIK_UBIN">Keramik/ubin</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                            
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Dinding : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=''" class="select-input select-input--material" >
+                                                        <option value="SEMEN">Semen</option>
+                                                        <option value="BATAKO_BATA">Batako/Bata</option>
+                                                        <option value="KAYU_PAPAN">Kayu/Papan</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Atap : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI=''" class="select-input select-input--material" >
+                                                        <option value="GENTENG">Genteng</option>
+                                                        <option value="SENG_ASBES">Seng/Asbes</option>
+                                                        <option value="RUMBIA">Rumbia</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Kamar mandi : </span>
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI=''" class="select-input select-input--material" placeholder="jenis penyakit">
+                                                        <option value="MILIK_PRIBADI">Milik pribadi</option>
+                                                        <option value="WC_UMUM_JARAK_KECIL_DARI_100M">WC Umum jarak < 100 m</option>
+                                                        <option value="WC_UMUM_JARAK_BESAR_DARI_100M">WC Umum jarak > 100 m</option>
+                                                        <option value="SUNGAI">Sungai</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Akses air bersih : </span>
+                                                
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI=''" class="select-input select-input--material">
+                                                        <option value="PDAM">PDAM</option>
+                                                        <option value="SUMUR_ATAU_SUMUR_BOR">Sumur/sumur bor</option>
+                                                        <option value="MATA_AIR_SUNGAI">Mata air/sungai</option>
+                                                        <option value="BELI">Beli</option>
+                                                        <option value="LAINNYA">Lainnya</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='LAINNYA'">
+                                                        <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Kepemilikan rumah : </span>
+                                                
+                                                    <select ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI=''" class="select-input select-input--material" >
+                                                        <option value="MILIK_SENDIRI">Milik sendiri</option>
+                                                        <option value="MILIK_KELUARGA">Milik keluarga</option>
+                                                        <option value="MILIK_ORANG_LAIN_TANPA_SEWA">Milik orang lain tanpa sewa</option>
+                                                        <option value="MILIK_PERUSAHAAN_NEGARA">Milik perusahaan/negara</option>
+                                                        <option value="SEWA">Sewa. Biaya per bulan</option>
+                                                    </select>
+                                                    <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='SEWA'">
+                                                        Rp. <input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI" class="text-input" placeholder="nominal" value="">
+                                                    </div>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--</div>-->
+                        <!--</div>-->
+                    </li>
+                </ul>
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+
+

@@ -1,0 +1,219 @@
+
+    <ons-splitter var="mySplitter" id="mySplitter">
+        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                    <div class="left">
+                        <ons-toolbar-button ui-sref="createsurvey">
+                            <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+                <ul class="list list--material">
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">1. Apakah nasabah memiliki kecacatan secara fisik?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_CACAT_FISIK" value="YA" class="checkbox__input" name="radioidkkstn1">
+                                <div class="checkbox__checkmark"></div>
+                                Ya
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_CACAT_FISIK" value="TIDAK" ng-click="fdSV.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI=''" class="checkbox__input" name="radioidkkstn1">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak
+                            </label>
+                            <div ng-show="fdSV.IDK_KESEHATAN_CACAT_FISIK=='YA'"><input type="text" ng-model="fdSV.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI" class="text-input" placeholder="Jika ya, sebutkan" value=""></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN" value="TIDAK_PERNAH" ng-click="
+                                    fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT='';
+                                    fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA='';
+                                    fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT='';
+                                    fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN='';
+                                    fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI='';
+                                " class="checkbox__input" name="radioidkkstn2">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak Pernah
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN" value="PERNAH" class="checkbox__input" name="radioidkkstn2">
+                                <div class="checkbox__checkmark"></div>
+                                Pernah
+                            </label>
+                            <div style="padding: 1px 0 0 0;" ng-show="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH'">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Jenis Penyakit : </span>
+                                                </div>
+                                                <div class="right">
+                                                    <select ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT" class="select-input select-input--material" placeholder="jenis penyakit">
+                                                        <option value="SAKIT_RINGAN">Sakit ringan</option>
+                                                        <option value="SAKIT_PARAH">Sakit parah</option>
+                                                    </select>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Penderita : </span>
+                                                </div>
+                                                <div class="right">
+                                                    <select ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA" class="select-input select-input--material right" placeholder="jenis penyakit">
+                                                        <option value="NASABAH">Nasabah</option>
+                                                        <option value="ANGGOTA_KELUARGA">Anggota keluarga</option>
+                                                    </select>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Kesulitan Biaya Berobat : </span>
+                                                </div>
+                                                <div class="right">
+                                                <select  ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT" class="select-input select-input--material" placeholder="jenis penyakit">
+                                                    <option value="YA">Ya</option>
+                                                    <option value="TIDAK">Tidak</option>
+                                                </select>
+                                                </div>
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <ons-list>
+                                            <ons-list-item>
+                                                <div class="center">
+                                                    <span>Cara mengatasi kesulitan : </span>
+                                                    <div>
+                                                        <select ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN" ng-change="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=''"  class="select-input select-input--material" placeholder="jenis penyakit" style="font-size: 10px;">
+                                                            <option value="MEMINJAM_UANG_DARI_ORANG_LAIN_KELUARGA_BANK_HARIAN_RENTENIR">Meminjam uang dari orang lain/keluarga/bank harian/rentenir</option>
+                                                            <option value="MENJUAL_BARANG_PRIBADI">Menjual barang pribadi</option>
+                                                            <option value="LAINNYA">Lainnya</option>
+                                                        </select>
+                                                        <div><input type="text" ng-show="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='LAINNYA'" ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika Lainnya, ketik disini" value=""></div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                
+                                            </ons-list-item>
+                                        </ons-list>
+                                        <div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title">3. Apakah <b>sebelum</b> bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN" value="TIDAK_PUNYA" ng-click="
+                                       fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS='';
+                                       fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN='';
+                                       fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR='';
+                                       fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL='';
+                                       " class="checkbox__input" name="radioidkkstn3">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak Punya
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN" value="PUNYA" class="checkbox__input" name="radioidkkstn3">
+                                <div class="checkbox__checkmark"></div>
+                                Punya
+                            </label>
+                            <div style="padding: 1px 0 0 0;" ng-show="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='PUNYA'">
+                                <div class="card">
+                                  <div class="card__content">
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS" ng-true-value="'KARTU_INDONESIA_SEHAT'" value="KARTU_INDONESIA_SEHAT" class="checkbox__input" >
+                                        <div class="checkbox__checkmark"></div>
+                                        Kartu Indonesia Sehat
+                                    </label>
+                                      <br>
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN" ng-true-value="'BPJS_KESEHATAN'" value="BPJS_KESEHATAN" class="checkbox__input" >
+                                        <div class="checkbox__checkmark"></div>
+                                        BPJS Kesehatan. Iuran bulanan sebesar
+                                    </label>
+                                    <div>Rp. <input type="number" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR" value="" class="text-input" placeholder="Ketik nominal" ></div>
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL" ng-true-value="'JAMINAN_KESEHATAN_NASIONAL'" value="JAMINAN_KESEHATAN_NASIONAL" class="checkbox__input" >
+                                        <div class="checkbox__checkmark"></div>
+                                        Jaminan Kesehatan Nasional (JKS)
+                                    </label>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title">4. Apakah <b>setelah</b> bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN" value="TIDAK_PUNYA" ng-click="
+                                       fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS='';
+                                       fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN='';
+                                       fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR='';
+                                       fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL='';
+                                       " class="checkbox__input" name="radioidkkstn4">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak Punya
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN" value="PUNYA" class="checkbox__input" name="radioidkkstn4">
+                                <div class="checkbox__checkmark"></div>
+                                Punya
+                            </label>
+                            <div style="padding: 1px 0 0 0;" ng-show="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='PUNYA'">
+                                <div class="card">
+                                  <div class="card__content">
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS" ng-true-value="'KARTU_INDONESIA_SEHAT'" class="checkbox__input" >
+                                        <div class="checkbox__checkmark"></div>
+                                        Kartu Indonesia Sehat
+                                    </label>
+                                      <br>
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN" ng-true-value="'BPJS_KESEHATAN'" class="checkbox__input" >
+                                        <div class="checkbox__checkmark"></div>
+                                        BPJS Kesehatan. Iuran bulanan sebesar
+                                    </label>
+                                    <div>Rp. <input type="number" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR" value="" class="text-input" placeholder="Ketik nominal" ></div>
+                                    <label class="checkbox">
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL" ng-true-value="'JAMINAN_KESEHATAN_NASIONAL'" class="checkbox__input" >
+                                        <div class="checkbox__checkmark"></div>
+                                        Jaminan Kesehatan Nasional (JKS)
+                                    </label>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+
+

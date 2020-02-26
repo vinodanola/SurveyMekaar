@@ -1,0 +1,39 @@
+    
+    <div class="sidemenu-header">
+        <div class="profile-pic" style="    background: #107ac2; border-color: #fff;">
+            <img src="images/icon.png">
+        </div>
+    </div>
+    <ons-list-title>Access</ons-list-title>
+    <ons-list>
+        <ons-list-item tappable ui-sref="home" >
+            <div class="left">
+                <ons-icon fixed-width class="list-item__icon" icon="ion-home, material:md-home"></ons-icon>
+            </div>
+            <div class="center">
+                Home
+            </div>
+<!--            <div class="right">
+              <ons-icon icon="fa-link"></ons-icon>
+            </div>-->
+        </ons-list-item>
+        <ons-list-item tappable ui-sref="rekap" >
+            <div class="left">
+                <ons-icon fixed-width class="list-item__icon" icon="fa-download, material:md-cloud-download"></ons-icon>
+            </div>
+            <div class="center">
+                Download
+            </div>
+            <div class="right">
+              <ons-icon icon="fa-link"></ons-icon>
+            </div>
+        </ons-list-item>
+        <ons-list-item tappable ng-click="$root.logout();">
+            <div class="left">
+                <ons-icon fixed-width class="list-item__icon" icon="fa-sign-out , material:md-shutdown"></ons-icon>
+            </div>
+            <div class="center">
+                Log out
+            </div>
+        </ons-list-item>
+    </ons-list>

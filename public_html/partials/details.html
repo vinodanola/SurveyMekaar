@@ -1,0 +1,36 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="$root.historyBack()">
+                <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">{{title}}</div>
+    </ons-toolbar>
+    <div class="center">
+        <ons-search-input placeholder="Search" class="on-top-page" ng-model="searchDetails"></ons-search-input>
+    </div>
+    <ons-list>
+        <ons-list-item ng-repeat="x in details | filter:searchDetails">
+            <div class="left text-center">
+                <span>{{x.OurBranchID}}</span>
+            </div>
+            <div class="center">
+                <span class="list-item__title">
+                    {{x.BranchName}}
+                </span>
+                <span class="list-item__subtitle">
+                    <p class="p-on-lis">
+                        <img class="img_detail_list" src="images/debit.jpeg"> Rp {{x.DebitAmount | number:2}} 
+                    </p>
+                    <p class="p-on-lis">
+                        <img class="img_detail_list" src="images/credit.jpeg"> Rp {{x.CreditAmount | number:2}}
+                    </p>
+                </span>
+                <span class="list-item__subtitle">
+                    {{x.Description}}
+                </span>
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>
