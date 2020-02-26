@@ -383,11 +383,11 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
         }
         else if (data.hasOwnProperty('LOKASI_CABANG')==false || data.LOKASI_CABANG=='' || data.LOKASI_CABANG==null || data.LOKASI_CABANG==undefined || data.LOKASI_CABANG=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Data surveyor -> Lokasi cabang (menit)'+vetd;
+            $scope.fdSV.ERROR = 'Data surveyor -> Lokasi cabang'+vetd;
         }
         else if (data.hasOwnProperty('GEOGRAFIS_CABANG')==false || data.GEOGRAFIS_CABANG=='' || data.GEOGRAFIS_CABANG==null || data.GEOGRAFIS_CABANG==undefined || data.GEOGRAFIS_CABANG=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Data surveyor -> Geografis cabang (menit)'+vetd;
+            $scope.fdSV.ERROR = 'Data surveyor -> Geografis cabang'+vetd;
         }
         
         /* Validasi Data Nasabah */
