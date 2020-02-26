@@ -429,181 +429,184 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
         
         else if (data.hasOwnProperty('IDK_KESEHATAN_CACAT_FISIK')==false || data.IDK_KESEHATAN_CACAT_FISIK=='' || data.IDK_KESEHATAN_CACAT_FISIK==null || data.IDK_KESEHATAN_CACAT_FISIK==undefined || data.IDK_KESEHATAN_CACAT_FISIK=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah memiliki kecacatan secara fisik?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan ->1. Apakah nasabah memiliki kecacatan secara fisik?'+vetd;
         } 
         else if (data.IDK_KESEHATAN_CACAT_FISIK=='YA' && (data.hasOwnProperty('IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI')==false || data.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI=='' || data.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI==null || data.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI==undefined || data.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah memiliki kecacatan secara fisik? Jika ya, sebutkan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan ->1. Apakah nasabah memiliki kecacatan secara fisik? Jika ya, sebutkan'+vetd;
         } 
         else if (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir?'+vetd;
         }
         else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_JENIS_PENYAKIT=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Jenis Penyakit'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Jenis Penyakit'+vetd;
         }
         else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_PENDERITA=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Penderita'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Penderita'+vetd;
         }
         else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Biaya berobat'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Biaya berobat'+vetd;
         }
         else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan'+vetd;
         }
         else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='LAINNYA' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan'+vetd;
         }
         else if (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah sebelum bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 3. Apakah sebelum bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan?'+vetd;
         }
         else if (
                 data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='PUNYA'
                 && (
                     (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS=='undefined')
-                    || (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='undefined')
-                    || (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='undefined')
+                    && (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='undefined')
+                    && (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='undefined')
                 )
             ){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah sebelum bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> KIS/BPJS/JKS '+vetd+' salah satu';
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 3. Apakah sebelum bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> KIS/BPJS/JKS '+vetd+' salah satu';
         }
         else if (data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='BPJS_KESEHATAN' && (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan ->  Apakah sebelum bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> BPJS -> BPJS Kesehatan. Iuran bulanan sebesar'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 3. Apakah sebelum bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> BPJS -> BPJS Kesehatan. Iuran bulanan sebesar'+vetd;
         }
-        
+        else if (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 4. Apakah setelah bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan?'+vetd;
+        }
         else if (
                 data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='PUNYA'
                 && (
                     (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS')==false || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS=='' || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS==null || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS==undefined || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_KIS=='undefined')
-                    || (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN')==false || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='' || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==null || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==undefined || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='undefined')
-                    || (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL')==false || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='' || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==null || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==undefined || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='undefined')
+                    && (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN')==false || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='' || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==null || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN==undefined || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='undefined')
+                    && (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL')==false || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='' || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==null || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL==undefined || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL=='undefined')
                 )
             ){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> Apakah setelah bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> KIS/BPJS/JKS '+vetd+' salah satu';
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 4. Apakah setelah bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> KIS/BPJS/JKS '+vetd+' salah satu';
         }
         else if (data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='BPJS_KESEHATAN' && (data.hasOwnProperty('IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR')==false || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR=='' || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR==null || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR==undefined || data.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan ->  Apakah setelah bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> BPJS -> BPJS Kesehatan. Iuran bulanan sebesar'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 4. Apakah setelah bergabung dengan Mekaar nasabah memiliki jaminan kartu jaminan kesehatan? -> BPJS -> BPJS Kesehatan. Iuran bulanan sebesar'+vetd;
         }
         
         /* Validasi Indikator Perubahan Hidup */
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN')==false || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='' || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN==null || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN==undefined || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Seberapa sering nasabah menabung sebelum menerima pembiayaan Mekaar?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 5. Seberapa sering nasabah menabung sebelum menerima pembiayaan Mekaar?'+vetd;
         }
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN')==false || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='' || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN==null || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN==undefined || data.IDK_PERUBAHAN_HIDUP_SEBERAPA_SERING_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Seberapa sering nasabah menabung setelah menerima pembiayaan Mekaar?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 6. Seberapa sering nasabah menabung setelah menerima pembiayaan Mekaar?'+vetd;
         }
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN==null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN==undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Dimana nasabah biasanya menabung sebelum menerima pembiayaan Mekaar?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 7. Dimana nasabah biasanya menabung sebelum menerima pembiayaan Mekaar?'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Dimana nasabah biasanya menabung sebelum menerima pembiayaan Mekaar? -> Jika lainnya, sebutkan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 7. Dimana nasabah biasanya menabung sebelum menerima pembiayaan Mekaar? -> Jika lainnya, sebutkan'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN=='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN===null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN===undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Dimana nasabah biasanya menabung sebelum menerima pembiayaan Mekaar? -> Nominal yang disisihkan untuk menabung setiap bulan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 7. Dimana nasabah biasanya menabung sebelum menerima pembiayaan Mekaar? -> Nominal yang disisihkan untuk menabung setiap bulan'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN==null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN==undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar?'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 8. Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar?'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar? -> Jika lainnya, sebutkan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 8. Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar? -> Jika lainnya, sebutkan'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN=='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN')==false || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==='' || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN===null || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN===undefined || data.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_NOMINAL_YANG_DISISIHKAN_SETIAP_BULAN==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar? -> Nominal yang disisihkan untuk menabung setiap bulan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 8. Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar? -> Nominal yang disisihkan untuk menabung setiap bulan'+vetd;
         }
         
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TELEVISI==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Televisi'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Televisi'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Tanah/Ladang'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Tanah/Ladang'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Tabungan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Tabungan'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Handphone'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Handphone'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HEWAN_TERNAK==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Ternak'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Ternak'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_GEROBAK_DAGANG==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Gerobak dagang'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Gerobak dagang'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_PERHIASAN==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Perhiasan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Perhiasan'+vetd;
         }
-        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA=='undefined'){
+        else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA==='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA===null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA===undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA==='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Lainnya'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Lainnya'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA>0 && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Jika lainnya, sebutkan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 9. Apa dan berapa jumlah perubahan barang dan aset yang dimiliki nasabah setelah menerima pembiayaan Mekaar ? -> Jika lainnya, sebutkan'+vetd;
         }
         
         //10
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Lantai'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Lantai'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Lantai -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Lantai -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Dinding'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Dinding'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Dinding -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Dinding -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Atap'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Atap'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Atap -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Atap -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kamar mandi'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kamar mandi'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kamar mandi -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kamar mandi -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='undefined'){
@@ -612,72 +615,72 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Akses air bersih -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Akses air bersih -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='SEWA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SEBELUM_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 10. Bagaimana kondisi rumah nasabah <b>sebelum</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah -> Jika Lainnya, ketik disini'+vetd;
         }
         
         //11
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Lantai'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Lantai'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_LANTAI_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Lantai -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Lantai -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Dinding'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Dinding'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Dinding -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Dinding -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Atap'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Atap'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_ATAP_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_DINDING_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Atap -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Atap -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kamar mandi'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kamar mandi'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KAMAR_MANDI_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kamar mandi -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kamar mandi -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Akses air bersih'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Akses air bersih'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH=='LAINNYA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_AKSES_AIR_BERSIH_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Akses air bersih -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Akses air bersih -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else if (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='undefined'){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah'+vetd;
         }
         else if (data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN=='SEWA' && (data.hasOwnProperty('IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI')==false || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI=='' || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI==null || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI==undefined || data.IDK_PERUBAHAN_HIDUP_KONDISI_RUMAH_SETELAH_MENERIMA_PEMBIAYAAN_KEPEMILIKAN_SEWA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah -> Jika Lainnya, ketik disini'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Perubahan Hidup -> 11. Bagaimana kondisi rumah nasabah <b>setelah</b> menerima pembiayaan Mekaar? -> Kepemilikan rumah -> Jika Lainnya, ketik disini'+vetd;
         }
         
         else {

@@ -150,11 +150,12 @@
                                     </label>
                                       <br>
                                     <label class="checkbox">
-                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN" ng-true-value="'BPJS_KESEHATAN'" value="BPJS_KESEHATAN" class="checkbox__input" >
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN" ng-true-value="'BPJS_KESEHATAN'" ng-change="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN!='BPJS_KESEHATAN' ? fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR='' : ''" value="BPJS_KESEHATAN" class="checkbox__input" >
                                         <div class="checkbox__checkmark"></div>
-                                        BPJS Kesehatan. Iuran bulanan sebesar
+                                        BPJS Kesehatan. <span ng-show="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='BPJS_KESEHATAN'">Iuran bulanan sebesar</span>
                                     </label>
-                                    <div>Rp. <input type="number" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR" value="" class="text-input" placeholder="Ketik nominal" ></div>
+                                    <div ng-show="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='BPJS_KESEHATAN'">Rp. <input type="number"  ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR" value="" class="text-input" placeholder="Ketik nominal" ></div>
+                                    <br>
                                     <label class="checkbox">
                                         <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL" ng-true-value="'JAMINAN_KESEHATAN_NASIONAL'" value="JAMINAN_KESEHATAN_NASIONAL" class="checkbox__input" >
                                         <div class="checkbox__checkmark"></div>
@@ -195,11 +196,12 @@
                                     </label>
                                       <br>
                                     <label class="checkbox">
-                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN" ng-true-value="'BPJS_KESEHATAN'" class="checkbox__input" >
+                                        <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN" ng-true-value="'BPJS_KESEHATAN'" ng-change="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN!='BPJS_KESEHATAN' ? fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR='' : ''" class="checkbox__input" >
                                         <div class="checkbox__checkmark"></div>
-                                        BPJS Kesehatan. Iuran bulanan sebesar
+                                        BPJS Kesehatan. <span ng-show="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='BPJS_KESEHATAN'">Iuran bulanan sebesar</span>
                                     </label>
-                                    <div>Rp. <input type="number" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR" value="" class="text-input" placeholder="Ketik nominal" ></div>
+                                    <div ng-show="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN=='BPJS_KESEHATAN'">Rp. <input type="number" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_BPJS_KESEHATAN_SEBESAR" value="" class="text-input" placeholder="Ketik nominal" ></div>
+                                    <br>
                                     <label class="checkbox">
                                         <input type="checkbox" ng-model="fdSV.IDK_KESEHATAN_SETELAH_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN_JAMINAN_KESEHATAN_NASIONAL" ng-true-value="'JAMINAN_KESEHATAN_NASIONAL'" class="checkbox__input" >
                                         <div class="checkbox__checkmark"></div>
