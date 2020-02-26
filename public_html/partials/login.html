@@ -14,8 +14,8 @@
                                         <p>
                                             Masuk menggunakan NIK dan tanggal lahir Anda.<br><br>
         Contoh: <br>
-        Username         : <b>13579.03.17</b> <br>
-        Password         : <b>19950801</b> format (yyyymmdd)
+        NIK                 : <b>13579.03.17</b> <br>
+        Tanggal lahir         : <b>19950801</b> format (yyyymmdd)
     </p>
                                     </div>
                                 </ons-list-item>
@@ -28,10 +28,10 @@
     <ons-list modifier="inset" style="margin-top: 10px">
         <ons-list-header>Log in</ons-list-header>
         <ons-list-item modifier="longdivider">
-            <input type="text" class="text-input" placeholder="Username" ng-model="username">
+            <input type="text" class="text-input" placeholder="NIK" ng-model="username">
         </ons-list-item>
         <ons-list-item modifier="longdivider">
-            <input type="password" class="text-input" placeholder="Password" ng-model="password">
+            <input type="password" class="text-input" placeholder="Tanggal Lahir" ng-model="password">
         </ons-list-item>
         <ons-list-item modifier="longdivider">
             <ons-button ng-click="auth({ username : username , password : password })">Sign in</ons-button>
@@ -39,5 +39,5 @@
     </ons-list>
 </ons-page>
 <ons-toast var="toastLoginFailed">
-    Username or password is wrong <button ng-click="toastLoginFailed.hide()">OK</button>
+    NIK or Tanggal lahir is wrong <button ng-click="toastLoginFailed.hide()">OK</button>
 </ons-toast>

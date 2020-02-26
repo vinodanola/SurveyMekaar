@@ -351,7 +351,7 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
     
     $scope.fdSV = {};
     
-    var vetd = ' harus diisi.';
+    var vetd = ' harus diisi';
     
     $scope.setSV = function(data){
         
@@ -721,6 +721,15 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
             }, function error(R) { console.log(R.statusText); gF.fL(); });
             
         }
+    };
+    
+    $scope.batalSurvey = function(){
+        
+        var r = confirm("Batal ??? Anda yakin membatalkan survey ini ?");
+        if (r == true) {
+            $state.go('home');
+        } else {}
+        
     };
     
     
