@@ -1,26 +1,33 @@
 <ui-view>
     <ons-splitter var="mySplitter" id="mySplitter">
-        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
             <ng-include src=" 'partials/sidemenu.html' "></ng-include>
-        </ons-splitter-side>
+        </ons-splitter-side>-->
         <ons-splitter-content>
             <ons-page>
                 <ons-toolbar>
                     <div class="center">{{title}}</div>
-                    <div class="right">
+<!--                    <div class="right">
                         <ons-toolbar-button ng-click="mySplitter.right.open();">
                             <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
                         </ons-toolbar-button>
-                    </div>
+                    </div>-->
                 </ons-toolbar>
                 <section style="padding: 8px">
                     <div style="height: 200px; padding: 1px 0 0 0;">
                         <div class="card" style=" background: #eafff3;">
                           <h2 class="card__title">SUKSES</h2>
-                          <div class="card__content">
+                          <div class="card__content" ng-show="jenisFD=='SV'">
                               Terima kasih atas partisipasi Anda. 
                               <p></p>
-                              <ons-button modifier="large" ui-sref="createsurvey">Buat Survey Lainnya</ons-button>
+                              <ons-button modifier="large" ui-sref="createsurvey" >Buat Survey Lainnya</ons-button>
+                              <p></p>
+                              <ons-button modifier="large" ui-sref="home">Selesai kembali ke Home</ons-button>
+                          </div>
+                          <div class="card__content" ng-show="jenisFD=='UDN'">
+                              Terima kasih atas partisipasi Anda. 
+                              <p></p>
+                              <ons-button modifier="large" ui-sref="updatedatanasabah" >Update data nasabah lainnya</ons-button>
                               <p></p>
                               <ons-button modifier="large" ui-sref="home">Selesai kembali ke Home</ons-button>
                           </div>

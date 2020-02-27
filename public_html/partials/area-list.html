@@ -18,7 +18,7 @@
                 <span class="list-item__title">All Area</span>
             </div>
         </ons-list-item>-->
-        <ons-list-item tappable ng-repeat="x in areas | filter: searchArea" ng-click="setArea(x.BRANCH_ID,x.BRANCH_NAMA)">
+        <ons-list-item tappable ng-repeat="x in areas | filter: searchArea" ng-click="setArea({type:jenisFD,id:x.BRANCH_ID,name:x.BRANCH_NAMA})">
             <div class="left text-center">
                 <span>{{x.BRANCH_ID}}</span>
             </div>

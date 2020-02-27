@@ -1,0 +1,155 @@
+<ui-view>
+    <ons-splitter var="mySplitter" id="mySplitter">
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>-->
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                </ons-toolbar>
+                <ons-list>
+<!--                    <ons-list-header>Filter</ons-list-header>-->
+                    <ons-list-item modifier="chevron" tappable ui-sref="updatedatanasabah.regions">
+                        <div class="center">
+                            Region
+                        </div>
+                        <div class="right">
+                            {{fdUDN.REGION_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="updatedatanasabah.areas">
+                        <div class="center">
+                            Area
+                        </div>
+                        <div class="right">
+                            {{fdUDN.AREA_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="updatedatanasabah.branchs">
+                        <div class="center">
+                            Branch
+                        </div>
+                        <div class="right">
+                            {{fdUDN.BRANCH_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="updatedatanasabah.nasabahs">
+                        <div class="center">
+                            Nasabah
+                        </div>
+                        <div class="right">
+                            {{fdUDN.NASABAH_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    
+                </ons-list>
+                <section style="padding: 8px" ng-show="fdUDN.NASABAH_ID">
+                    <div style=" padding: 1px 0 0 0;">
+                        <div class="card" style="background: #f9f9f9;">
+                          <!--<h5>Detail Nasabah </h5>-->
+                          <div class="card__content">
+                            <ons-list>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Plafond
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_PLAFOND}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Jangka Waktu
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_JANGKA_WAKTU}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Alamat
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_ALAMAT}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Nama Kelompok
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_NAMA_KELOMPOK}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Hari Pertemuan
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_HARI_PERTEMUAN}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        No. Rekening
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_NO_REKENING}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Siklus
+                                    </div>
+                                    <div class="right">
+                                        {{fdUDN.NASABAH_SIKLUS}}
+                                    </div>
+                                </ons-list-item>
+                            </ons-list>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+                <ul class="list list--material">
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Apakah nasabah memiliki HP?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdUDN.APAKAH_PUNYA_HP" value="PUNYA" class="checkbox__input" name="radioidkkstn1" >
+                                <div class="checkbox__checkmark"></div>
+                                Punya
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdUDN.APAKAH_PUNYA_HP" value="TIDAK_PUNYA" ng-click="fdUDN.TIPE_HP='';fdUDN.NOMOR_HP='';" ng-click="fdSV.IDK_KESEHATAN_CACAT_FISIK_DESKRIPSI=''" class="checkbox__input" name="radioidkkstn1">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak Punya
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material" ng-show="fdUDN.APAKAH_PUNYA_HP=='PUNYA'">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Tipe HP</div>
+                        <div><input type="text" ng-model="fdUDN.TIPE_HP" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material" ng-show="fdUDN.APAKAH_PUNYA_HP=='PUNYA'">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">No HP Nasabah</div>
+                        <div><input type="text" ng-model="fdUDN.NOMOR_HP" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                </ul>
+                <br>
+                <div style="padding: 5px; text-align:center; margin-bottom: 100px;">
+                    <button class="button--cta" ng-click="setUDN(fdUDN)">Simpan</button>
+                    <button class="button--cta" ng-click="batalUDN()">Batal</button>
+                </div>
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+</ui-view>
+
+

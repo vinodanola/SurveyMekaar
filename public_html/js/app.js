@@ -142,6 +142,69 @@ App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locatio
             }
         })
         
+        .state('updatedatanasabah', {
+            url: '/update-data-nasabah',
+            templateUrl: 'partials/update-data-nasabah.html?UNIQID='+Math.random(),
+            controller: 'updatedatanasabahCtrl',
+            data: {
+                pageTitle: 'Update Data Nasabah'
+            }
+        })
+        
+        .state('updatedatanasabah.regions', {
+            url: '/regions',
+            templateUrl: 'partials/region-list.html?UNIQID='+Math.random(),
+            controller: 'regionsCtrl',
+            data: {
+                pageTitle: 'Regions'
+            }
+        })
+        
+        .state('updatedatanasabah.areas', {
+            url: '/areas',
+            templateUrl: 'partials/area-list.html?UNIQID='+Math.random(),
+            controller: 'areasCtrl',
+            data: {
+                pageTitle: 'Areas'
+            }
+        })
+        
+        .state('updatedatanasabah.branchs', {
+            url: '/branchs',
+            templateUrl: 'partials/branch-list.html?UNIQID='+Math.random(),
+            controller: 'branchsCtrl',
+            data: {
+                pageTitle: 'Branchs'
+            }
+        })
+        
+        .state('updatedatanasabah.nasabahs', {
+            url: '/nasabahs',
+            templateUrl: 'partials/nasabah-list.html?UNIQID='+Math.random(),
+            controller: 'nasabahsCtrl',
+            data: {
+                pageTitle: 'Nasabah'
+            }
+        })
+        
+        .state('updatedatanasabah.sukses', {
+            url: '/sukses',
+            templateUrl: 'partials/sukses.html?UNIQID='+Math.random(),
+            controller: 'suksesCtrl',
+            data: {
+                pageTitle: 'Sukses'
+            }
+        })
+        
+        .state('updatedatanasabah.error', {
+            url: '/error',
+            templateUrl: 'partials/error.html?UNIQID='+Math.random(),
+            controller: 'errorCtrl',
+            data: {
+                pageTitle: 'Error'
+            }
+        })
+        
         .state('details', {
             url: '/details/:region/:area/:branch/:startDate',
             templateUrl: 'partials/details.html?UNIQID='+Math.random(),
@@ -353,9 +416,18 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
     
     $scope.fdSV = {};
     
+    $scope.jenisFD = 'SV';
+    
+    console.log($scope.jenisFD);
+    
     var vetd = ' harus diisi';
     
     $scope.setSV = function(data){
+        
+        $scope.fdSV.NIK_CREATOR = $localStorage.SESSION_LOGIN[0].nik;
+        $scope.fdSV.NAMA_CREATOR = $localStorage.SESSION_LOGIN[0].nama_hris;
+
+        console.log($scope.fdSV);
         
         /* Validasi Data Surveyor */
         
@@ -418,6 +490,44 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
             $state.go('createsurvey.error');
             $scope.fdSV.ERROR = 'Data nasabah -> Id branch'+vetd;
         }
+        
+        else if (data.hasOwnProperty('NASABAH_ID')==false || data.NASABAH_ID=='' || data.NASABAH_ID==null || data.NASABAH_ID==undefined || data.NASABAH_ID=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah'+vetd;
+        }
+        else if (data.hasOwnProperty('NASABAH_NAMA')==false || data.NASABAH_NAMA=='' || data.NASABAH_NAMA==null || data.NASABAH_NAMA==undefined || data.NASABAH_NAMA=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah nama'+vetd;
+        }
+        else if (data.hasOwnProperty('NASABAH_PLAFOND')==false || data.NASABAH_PLAFOND=='' || data.NASABAH_PLAFOND==null || data.NASABAH_PLAFOND==undefined || data.NASABAH_PLAFOND=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah plafond tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_JANGKA_WAKTU')==false || data.NASABAH_JANGKA_WAKTU=='' || data.NASABAH_JANGKA_WAKTU==null || data.NASABAH_JANGKA_WAKTU==undefined || data.NASABAH_JANGKA_WAKTU=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah jangka waktu tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_ALAMAT')==false || data.NASABAH_ALAMAT=='' || data.NASABAH_ALAMAT==null || data.NASABAH_ALAMAT==undefined || data.NASABAH_ALAMAT=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah alamat tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_NAMA_KELOMPOK')==false || data.NASABAH_NAMA_KELOMPOK=='' || data.NASABAH_NAMA_KELOMPOK==null || data.NASABAH_NAMA_KELOMPOK==undefined || data.NASABAH_NAMA_KELOMPOK=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah nama kelompok tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_HARI_PERTEMUAN')==false || data.NASABAH_HARI_PERTEMUAN=='' || data.NASABAH_HARI_PERTEMUAN==null || data.NASABAH_HARI_PERTEMUAN==undefined || data.NASABAH_HARI_PERTEMUAN=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah hari pertemuan tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_NO_REKENING')==false || data.NASABAH_NO_REKENING=='' || data.NASABAH_NO_REKENING==null || data.NASABAH_NO_REKENING==undefined || data.NASABAH_NO_REKENING=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah nomor rekening tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_SIKLUS')==false || data.NASABAH_SIKLUS=='' || data.NASABAH_SIKLUS==null || data.NASABAH_SIKLUS==undefined || data.NASABAH_SIKLUS=='undefined'){
+            $state.go('createsurvey.error');
+            $scope.fdSV.ERROR = 'Data nasabah -> Nasabah siklus tidak boleh kosong';
+        }
+        
         else if (data.hasOwnProperty('NASABAH_UMUR')==false || data.NASABAH_UMUR=='' || data.NASABAH_UMUR==null || data.NASABAH_UMUR==undefined || data.NASABAH_UMUR=='undefined'){
             $state.go('createsurvey.error');
             $scope.fdSV.ERROR = 'Data nasabah -> Umur nasabah'+vetd;
@@ -695,8 +805,7 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
         }
         else {
             
-            $scope.fdSV.NIK_CREATOR = $localStorage.SESSION_LOGIN[0].nik;
-            $scope.fdSV.NAMA_CREATOR = $localStorage.SESSION_LOGIN[0].nama_hris;
+            $scope.fdSV.ERROR = '';
        
             gF.sL();
             $http({
@@ -776,6 +885,140 @@ App.controller('errorCtrl',['$localStorage','$location', '$rootScope', '$statePa
     function($localStorage, $location, $rootScope, $stateParams, $state, $window, $http, apiData ){
     
     
+    
+}]);
+
+App.controller('updatedatanasabahCtrl',['$localStorage','$location', '$rootScope', '$stateParams', '$state', '$window', '$http', 'apiData', '$scope', 'apiBase', 'gF', 'Authorization',
+    function($localStorage, $location, $rootScope, $stateParams, $state, $window, $http, apiData, $scope, apiBase, gF, Authorization ){
+    
+    $scope.fdUDN = {};
+    
+    console.log($scope.fdUDN);
+    
+    $scope.jenisFD = 'UDN';
+    
+    console.log($scope.jenisFD);
+    
+    var vetd = ' harus diisi';
+    
+    $scope.setUDN = function(data){
+        
+        $scope.fdUDN.NIK_CREATOR = $localStorage.SESSION_LOGIN[0].nik;
+        $scope.fdUDN.NAMA_CREATOR = $localStorage.SESSION_LOGIN[0].nama_hris;
+        
+        console.log($scope.fdUDN);
+        
+        if (data.hasOwnProperty('REGION_NAMA')==false || data.REGION_NAMA=='' || data.REGION_NAMA==null || data.REGION_NAMA==undefined || data.REGION_NAMA=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nama region'+vetd;
+        } 
+        else if (data.hasOwnProperty('REGION_ID')==false || data.REGION_ID=='' || data.REGION_ID==null || data.REGION_ID==undefined || data.REGION_ID=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Id region'+vetd;
+        } 
+        else if (data.hasOwnProperty('AREA_NAMA')==false || data.AREA_NAMA=='' || data.AREA_NAMA==null || data.AREA_NAMA==undefined || data.AREA_NAMA=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nama area'+vetd;
+        }
+        else if (data.hasOwnProperty('AREA_ID')==false || data.AREA_ID=='' || data.AREA_ID==null || data.AREA_ID==undefined || data.AREA_ID=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Id area'+vetd;
+        }
+        else if (data.hasOwnProperty('BRANCH_NAMA')==false || data.BRANCH_NAMA=='' || data.BRANCH_NAMA==null || data.BRANCH_NAMA==undefined || data.BRANCH_NAMA=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nama branch'+vetd;
+        }
+        else if (data.hasOwnProperty('BRANCH_ID')==false || data.BRANCH_ID=='' || data.BRANCH_ID==null || data.BRANCH_ID==undefined || data.BRANCH_ID=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Id branch'+vetd;
+        }
+        else if (data.hasOwnProperty('NASABAH_ID')==false || data.NASABAH_ID=='' || data.NASABAH_ID==null || data.NASABAH_ID==undefined || data.NASABAH_ID=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah'+vetd;
+        }
+        else if (data.hasOwnProperty('NASABAH_NAMA')==false || data.NASABAH_NAMA=='' || data.NASABAH_NAMA==null || data.NASABAH_NAMA==undefined || data.NASABAH_NAMA=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah nama'+vetd;
+        }
+        else if (data.hasOwnProperty('NASABAH_PLAFOND')==false || data.NASABAH_PLAFOND=='' || data.NASABAH_PLAFOND==null || data.NASABAH_PLAFOND==undefined || data.NASABAH_PLAFOND=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah plafond tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_JANGKA_WAKTU')==false || data.NASABAH_JANGKA_WAKTU=='' || data.NASABAH_JANGKA_WAKTU==null || data.NASABAH_JANGKA_WAKTU==undefined || data.NASABAH_JANGKA_WAKTU=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah jangka waktu tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_ALAMAT')==false || data.NASABAH_ALAMAT=='' || data.NASABAH_ALAMAT==null || data.NASABAH_ALAMAT==undefined || data.NASABAH_ALAMAT=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah alamat tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_NAMA_KELOMPOK')==false || data.NASABAH_NAMA_KELOMPOK=='' || data.NASABAH_NAMA_KELOMPOK==null || data.NASABAH_NAMA_KELOMPOK==undefined || data.NASABAH_NAMA_KELOMPOK=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah nama kelompok tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_HARI_PERTEMUAN')==false || data.NASABAH_HARI_PERTEMUAN=='' || data.NASABAH_HARI_PERTEMUAN==null || data.NASABAH_HARI_PERTEMUAN==undefined || data.NASABAH_HARI_PERTEMUAN=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah hari pertemuan tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_NO_REKENING')==false || data.NASABAH_NO_REKENING=='' || data.NASABAH_NO_REKENING==null || data.NASABAH_NO_REKENING==undefined || data.NASABAH_NO_REKENING=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah nomor rekening tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('NASABAH_SIKLUS')==false || data.NASABAH_SIKLUS=='' || data.NASABAH_SIKLUS==null || data.NASABAH_SIKLUS==undefined || data.NASABAH_SIKLUS=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nasabah siklus tidak boleh kosong';
+        }
+        else if (data.hasOwnProperty('APAKAH_PUNYA_HP')==false || data.APAKAH_PUNYA_HP=='' || data.APAKAH_PUNYA_HP==null || data.APAKAH_PUNYA_HP==undefined || data.APAKAH_PUNYA_HP=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Apakah nasabah memiliki HP?'+vetd;
+        } 
+        else if (data.APAKAH_PUNYA_HP=='PUNYA' && (data.hasOwnProperty('TIPE_HP')==false || data.TIPE_HP=='' || data.TIPE_HP==null || data.TIPE_HP==undefined || data.TIPE_HP=='undefined')){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Tipe HP'+vetd;
+        }
+        else if (data.APAKAH_PUNYA_HP=='PUNYA' && (data.hasOwnProperty('NOMOR_HP')==false || data.NOMOR_HP=='' || data.NOMOR_HP==null || data.NOMOR_HP==undefined || data.NOMOR_HP=='undefined')){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'Nomor HP'+vetd;
+        }
+        else {
+            
+            $scope.fdUDN.ERROR = '';
+            
+            gF.sL();
+            $http({
+                method      : "POST",
+                url         : apiBase + 'UpdateDataNasabah/UDN',
+                data        : data, 
+                headers     : { 
+                    'Content-Type' : 'application/x-www-form-urlencoded',
+                    'Authorization' : Authorization
+                }
+            }).then(function success(R) {
+
+    //            $scope.R = R.data.Data;
+                if (R.data.Data=='Success'){
+                    $state.go('updatedatanasabah.sukses');
+                    $scope.fdUDN = {};
+                } else {
+                    $state.go('updatedatanasabah.error');
+                }
+                console.log(R);
+
+                gF.fL();
+
+            }, function error(R) { console.log(R.statusText); gF.fL(); });
+        }
+        
+    };
+    
+    $scope.batalUDN = function(){
+        
+        var r = confirm("Batal ??? Anda yakin membatalkan ini ?");
+        if (r == true) {
+            $state.go('home');
+        } else {}
+        
+    };
     
 }]);
 
@@ -915,14 +1158,49 @@ App.controller('regionsCtrl',function($rootScope,$scope,$http,apiBase,Authorizat
     };
     $scope.getRegions();
     
-    $scope.setRegion = function(id,name){
-        $scope.fdSV.REGION_ID = id;
-        $scope.fdSV.REGION_NAMA = name;
-        $scope.fdSV.AREA_ID = '';
-        $scope.fdSV.AREA_NAMA = '';
-        $scope.fdSV.BRANCH_ID = '';
-        $scope.fdSV.BRANCH_NAMA = '';
-        $state.go('createsurvey.datanasabah');
+    $scope.setRegion = function(x){
+        
+        if (x.type==='UDN'){
+            $scope.fdUDN.REGION_ID = x.id;
+            $scope.fdUDN.REGION_NAMA = x.name;
+            $scope.fdUDN.AREA_ID = '';
+            $scope.fdUDN.AREA_NAMA = '';
+            $scope.fdUDN.BRANCH_ID = '';
+            $scope.fdUDN.BRANCH_NAMA = '';
+            
+            $scope.fdUDN.NASABAH_ID = '';
+            $scope.fdUDN.NASABAH_NAMA = '';
+            $scope.fdUDN.NASABAH_BRANCH = '';
+            $scope.fdUDN.NASABAH_PLAFOND = '';
+            $scope.fdUDN.NASABAH_NO_REKENING = '';
+            $scope.fdUDN.NASABAH_JANGKA_WAKTU = '';
+            $scope.fdUDN.NASABAH_ALAMAT = '';
+            $scope.fdUDN.NASABAH_NAMA_KELOMPOK = '';
+            $scope.fdUDN.NASABAH_HARI_PERTEMUAN = '';
+            $scope.fdUDN.NASABAH_SIKLUS = '';
+            
+            $state.go('updatedatanasabah');
+        } else {    
+            $scope.fdSV.REGION_ID = x.id;
+            $scope.fdSV.REGION_NAMA = x.name;
+            $scope.fdSV.AREA_ID = '';
+            $scope.fdSV.AREA_NAMA = '';
+            $scope.fdSV.BRANCH_ID = '';
+            $scope.fdSV.BRANCH_NAMA = '';
+            
+            $scope.fdSV.NASABAH_ID = '';
+            $scope.fdSV.NASABAH_NAMA = '';
+            $scope.fdSV.NASABAH_BRANCH = '';
+            $scope.fdSV.NASABAH_PLAFOND = '';
+            $scope.fdSV.NASABAH_NO_REKENING = '';
+            $scope.fdSV.NASABAH_JANGKA_WAKTU = '';
+            $scope.fdSV.NASABAH_ALAMAT = '';
+            $scope.fdSV.NASABAH_NAMA_KELOMPOK = '';
+            $scope.fdSV.NASABAH_HARI_PERTEMUAN = '';
+            $scope.fdSV.NASABAH_SIKLUS = '';
+            
+            $state.go('createsurvey.datanasabah');
+        }
     };
     
 });
@@ -947,14 +1225,52 @@ App.controller('areasCtrl',function($rootScope,$scope,$http,apiBase,Authorizatio
 
         }, function error(R) { console.log(R.statusText); gF.fL(); });
     };
-    $scope.getAreas($scope.fdSV.REGION_ID);
     
-    $scope.setArea = function(id,name){
-        $scope.fdSV.AREA_ID = id;
-        $scope.fdSV.AREA_NAMA = name;
-        $scope.fdSV.BRANCH_ID = '';
-        $scope.fdSV.BRANCH_NAMA = '';
-        $state.go('createsurvey.datanasabah');
+    if ($scope.jenisFD==='UDN') {
+        $scope.getAreas($scope.fdUDN.REGION_ID);
+    } else {
+        $scope.getAreas($scope.fdSV.REGION_ID);
+    }
+    
+    $scope.setArea = function(x){
+        
+        if (x.type==='UDN'){
+            $scope.fdUDN.AREA_ID = x.id;
+            $scope.fdUDN.AREA_NAMA = x.name;
+            $scope.fdUDN.BRANCH_ID = '';
+            $scope.fdUDN.BRANCH_NAMA = '';
+            
+            $scope.fdUDN.NASABAH_ID = '';
+            $scope.fdUDN.NASABAH_NAMA = '';
+            $scope.fdUDN.NASABAH_BRANCH = '';
+            $scope.fdUDN.NASABAH_PLAFOND = '';
+            $scope.fdUDN.NASABAH_NO_REKENING = '';
+            $scope.fdUDN.NASABAH_JANGKA_WAKTU = '';
+            $scope.fdUDN.NASABAH_ALAMAT = '';
+            $scope.fdUDN.NASABAH_NAMA_KELOMPOK = '';
+            $scope.fdUDN.NASABAH_HARI_PERTEMUAN = '';
+            $scope.fdUDN.NASABAH_SIKLUS = '';
+            
+            $state.go('updatedatanasabah');
+        } else {
+            $scope.fdSV.AREA_ID = x.id;
+            $scope.fdSV.AREA_NAMA = x.name;
+            $scope.fdSV.BRANCH_ID = '';
+            $scope.fdSV.BRANCH_NAMA = '';
+            
+            $scope.fdSV.NASABAH_ID = '';
+            $scope.fdSV.NASABAH_NAMA = '';
+            $scope.fdSV.NASABAH_BRANCH = '';
+            $scope.fdSV.NASABAH_PLAFOND = '';
+            $scope.fdSV.NASABAH_NO_REKENING = '';
+            $scope.fdSV.NASABAH_JANGKA_WAKTU = '';
+            $scope.fdSV.NASABAH_ALAMAT = '';
+            $scope.fdSV.NASABAH_NAMA_KELOMPOK = '';
+            $scope.fdSV.NASABAH_HARI_PERTEMUAN = '';
+            $scope.fdSV.NASABAH_SIKLUS = '';
+            
+            $state.go('createsurvey.datanasabah');
+        }
     };
     
 });
@@ -979,12 +1295,46 @@ App.controller('branchsCtrl',function($rootScope,$scope,filterFilter,$http,apiBa
 
         }, function error(R) { console.log(R.statusText); gF.fL(); });
     };
-    $scope.getBranchs($scope.fdSV.REGION_ID,$scope.fdSV.AREA_ID);
+    if ($scope.jenisFD==='UDN') {
+        $scope.getBranchs($scope.fdUDN.REGION_ID,$scope.fdUDN.AREA_ID);
+    } else {
+        $scope.getBranchs($scope.fdSV.REGION_ID,$scope.fdSV.AREA_ID);
+    }
     
-    $scope.setBranch = function(id,name){
-        $scope.fdSV.BRANCH_ID = id;
-        $scope.fdSV.BRANCH_NAMA = name;
-        $state.go('createsurvey.datanasabah');
+    $scope.setBranch = function(x){
+        if (x.type==='UDN'){
+            $scope.fdUDN.BRANCH_ID = x.id;
+            $scope.fdUDN.BRANCH_NAMA = x.name;
+            
+            $scope.fdUDN.NASABAH_ID = '';
+            $scope.fdUDN.NASABAH_NAMA = '';
+            $scope.fdUDN.NASABAH_BRANCH = '';
+            $scope.fdUDN.NASABAH_PLAFOND = '';
+            $scope.fdUDN.NASABAH_NO_REKENING = '';
+            $scope.fdUDN.NASABAH_JANGKA_WAKTU = '';
+            $scope.fdUDN.NASABAH_ALAMAT = '';
+            $scope.fdUDN.NASABAH_NAMA_KELOMPOK = '';
+            $scope.fdUDN.NASABAH_HARI_PERTEMUAN = '';
+            $scope.fdUDN.NASABAH_SIKLUS = '';
+            
+            $state.go('updatedatanasabah');
+        } else {
+            $scope.fdSV.BRANCH_ID = x.id;
+            $scope.fdSV.BRANCH_NAMA = x.name;
+            
+            $scope.fdSV.NASABAH_ID = '';
+            $scope.fdSV.NASABAH_NAMA = '';
+            $scope.fdSV.NASABAH_BRANCH = '';
+            $scope.fdSV.NASABAH_PLAFOND = '';
+            $scope.fdSV.NASABAH_NO_REKENING = '';
+            $scope.fdSV.NASABAH_JANGKA_WAKTU = '';
+            $scope.fdSV.NASABAH_ALAMAT = '';
+            $scope.fdSV.NASABAH_NAMA_KELOMPOK = '';
+            $scope.fdSV.NASABAH_HARI_PERTEMUAN = '';
+            $scope.fdSV.NASABAH_SIKLUS = '';
+            
+            $state.go('createsurvey.datanasabah');
+        }
     };
      
 });
@@ -1011,7 +1361,12 @@ App.controller('nasabahsCtrl',function($rootScope,$scope,filterFilter,$http,apiB
 
         }, function error(R) { console.log(R.statusText); gF.fL(); });
     };
-    $scope.getNasabahs($scope.fdSV.BRANCH_ID,$rootScope.searchNasabah);
+    
+    if ($scope.jenisFD==='UDN') {
+        $scope.getNasabahs($scope.fdUDN.BRANCH_ID,$rootScope.searchNasabah);
+    } else {
+        $scope.getNasabahs($scope.fdSV.BRANCH_ID,$rootScope.searchNasabah);
+    }
     
     $rootScope.$watch('searchNasabah', function(newValues, oldValues, scope) {
         if (newValues) {		
@@ -1019,18 +1374,32 @@ App.controller('nasabahsCtrl',function($rootScope,$scope,filterFilter,$http,apiB
         }
     });
     
-    $scope.setNasabah = function(x){
-        $scope.fdSV.NASABAH_ID = x.NASABAH_ID;
-        $scope.fdSV.NASABAH_NAMA = x.NASABAH_NAMA;
-        $scope.fdSV.NASABAH_BRANCH = x.NASABAH_BRANCH;
-        $scope.fdSV.NASABAH_PLAFOND = x.NASABAH_PLAFOND;
-        $scope.fdSV.NASABAH_NO_REKENING = x.NASABAH_NO_REKENING;
-        $scope.fdSV.NASABAH_JANGKA_WAKTU = x.NASABAH_JANGKA_WAKTU;
-        $scope.fdSV.NASABAH_ALAMAT = x.NASABAH_ALAMAT;
-        $scope.fdSV.NASABAH_NAMA_KELOMPOK = x.NASABAH_NAMA_KELOMPOK;
-        $scope.fdSV.NASABAH_HARI_PERTEMUAN = x.NASABAH_HARI_PERTEMUAN;
-        $scope.fdSV.NASABAH_SIKLUS = x.NASABAH_SIKLUS;
-        $state.go('createsurvey.datanasabah');
+    $scope.setNasabah = function(x,type){
+        if (type==='UDN'){ 
+            $scope.fdUDN.NASABAH_ID = x.NASABAH_ID;
+            $scope.fdUDN.NASABAH_NAMA = x.NASABAH_NAMA;
+            $scope.fdUDN.NASABAH_BRANCH = x.NASABAH_BRANCH;
+            $scope.fdUDN.NASABAH_PLAFOND = x.NASABAH_PLAFOND;
+            $scope.fdUDN.NASABAH_NO_REKENING = x.NASABAH_NO_REKENING;
+            $scope.fdUDN.NASABAH_JANGKA_WAKTU = x.NASABAH_JANGKA_WAKTU;
+            $scope.fdUDN.NASABAH_ALAMAT = x.NASABAH_ALAMAT;
+            $scope.fdUDN.NASABAH_NAMA_KELOMPOK = x.NASABAH_NAMA_KELOMPOK;
+            $scope.fdUDN.NASABAH_HARI_PERTEMUAN = x.NASABAH_HARI_PERTEMUAN;
+            $scope.fdUDN.NASABAH_SIKLUS = x.NASABAH_SIKLUS;
+            $state.go('updatedatanasabah');
+        } else {
+            $scope.fdSV.NASABAH_ID = x.NASABAH_ID;
+            $scope.fdSV.NASABAH_NAMA = x.NASABAH_NAMA;
+            $scope.fdSV.NASABAH_BRANCH = x.NASABAH_BRANCH;
+            $scope.fdSV.NASABAH_PLAFOND = x.NASABAH_PLAFOND;
+            $scope.fdSV.NASABAH_NO_REKENING = x.NASABAH_NO_REKENING;
+            $scope.fdSV.NASABAH_JANGKA_WAKTU = x.NASABAH_JANGKA_WAKTU;
+            $scope.fdSV.NASABAH_ALAMAT = x.NASABAH_ALAMAT;
+            $scope.fdSV.NASABAH_NAMA_KELOMPOK = x.NASABAH_NAMA_KELOMPOK;
+            $scope.fdSV.NASABAH_HARI_PERTEMUAN = x.NASABAH_HARI_PERTEMUAN;
+            $scope.fdSV.NASABAH_SIKLUS = x.NASABAH_SIKLUS;
+            $state.go('createsurvey.datanasabah');
+        }
     };
      
 });

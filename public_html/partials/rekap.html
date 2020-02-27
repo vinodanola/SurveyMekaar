@@ -1,7 +1,7 @@
 <ui-view>
     <ons-splitter var="mySplitter" id="mySplitter">
         <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
-            <ng-include src=" 'partials/sidemenu.html'+$root.MY_MATH_RANDOM "></ng-include>
+            <ng-include src=" 'partials/sidemenu.html?UNIQUE='+$root.MY_MATH_RANDOM "></ng-include>
         </ons-splitter-side>
         <ons-splitter-content>
             <ons-page>
@@ -14,12 +14,23 @@
                     </div>
                 </ons-toolbar>
                 <section style="padding: 8px">
-                    <div style="height: 200px; padding: 1px 0 0 0;">
+                    <div style=" padding: 1px 0 0 0;">
                         <div class="card" style="background: #f5f5f5;">
                           
                           <p>Unduh rekap survey dengan menekan tombol dibawah.</p>
                           <div class="card__content">
                               <a modifier="large" class="button--cta" href="{{$root.API_BASE}}Survey/Rekap" target="_blank" download>Unduh</a>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+                <section style="padding: 8px">
+                    <div style=" padding: 1px 0 0 0;">
+                        <div class="card" style="background: #f5f5f5;">
+                          
+                          <p>Unduh rekap update data nasabah dengan menekan tombol dibawah.</p>
+                          <div class="card__content">
+                              <a modifier="large" class="button--cta" href="{{$root.API_BASE}}UpdateDataNasabah/Rekap" target="_blank" download>Unduh</a>
                           </div>
                         </div>
                     </div>

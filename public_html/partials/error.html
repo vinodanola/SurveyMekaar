@@ -1,29 +1,37 @@
 <ui-view>
     <ons-splitter var="mySplitter" id="mySplitter">
-        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
             <ng-include src=" 'partials/sidemenu.html' "></ng-include>
-        </ons-splitter-side>
+        </ons-splitter-side>-->
         <ons-splitter-content>
             <ons-page>
                 <ons-toolbar>
                     <div class="center">{{title}}</div>
-                    <div class="right">
+<!--                    <div class="right">
                         <ons-toolbar-button ng-click="mySplitter.right.open();">
                             <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
                         </ons-toolbar-button>
-                    </div>
+                    </div>-->
                 </ons-toolbar>
                 <section style="padding: 8px">
                     <div style=" padding: 1px 0 0 0;">
                         <div class="card" style=" background: #ffeaea;">
                           <h5 class="card__title">Error detail</h5>
-                          <div class="card__content">
+                          <div class="card__content" ng-show="jenisFD=='SV'">
                               <p>{{fdSV.ERROR}}</p>
                               
                               Silahkan tekan tombol di bawah dan periksa data anda kembali.
                               Jika masih terjadi error silahkan hubungi Administrator.
                               <p></p>
                               <ons-button modifier="large" ui-sref="createsurvey">Periksa kembali</ons-button>
+                          </div>
+                          <div class="card__content" ng-show="jenisFD=='UDN'">
+                              <p>{{fdUDN.ERROR}}</p>
+                              
+                              Silahkan tekan tombol di bawah dan periksa data anda kembali.
+                              Jika masih terjadi error silahkan hubungi Administrator.
+                              <p></p>
+                              <ons-button modifier="large" ui-sref="updatedatanasabah">Periksa kembali</ons-button>
                           </div>
                         </div>
                     </div>
