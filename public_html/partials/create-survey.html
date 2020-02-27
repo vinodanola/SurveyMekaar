@@ -1,17 +1,17 @@
 <ui-view>
     <ons-splitter var="mySplitter" id="mySplitter">
-        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
-            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
-        </ons-splitter-side>
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html?UNIQID='+$root.MY_MATH_RANDOM "></ng-include>
+        </ons-splitter-side>-->
         <ons-splitter-content>
             <ons-page>
                 <ons-toolbar>
                     <div class="center">{{title}}</div>
-                    <div class="right">
+<!--                    <div class="right">
                         <ons-toolbar-button ng-click="mySplitter.right.open();">
                             <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
                         </ons-toolbar-button>
-                    </div>
+                    </div>-->
 <!--                    <div class="left">
                         <ons-toolbar-button ng-click="$root.historyBack()">
                             <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
@@ -19,7 +19,7 @@
                     </div>-->
                 </ons-toolbar>
                 <ons-list>
-                    <ons-list-header>Kategori</ons-list-header>
+                    <ons-list-header>Kategori </ons-list-header>
                     <ons-list-item modifier="chevron" tappable ui-sref="createsurvey.datasurveyor">
                         <div class="left">
                             <ons-icon icon="fa-link"></ons-icon>

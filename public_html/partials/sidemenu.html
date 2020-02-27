@@ -4,7 +4,7 @@
             <img src="images/icon.png">
         </div>
     </div>
-    <ons-list-title>Access</ons-list-title>
+    <ons-list-title>Access {{$root.$storage.SESSION_LOGIN[0].role}}</ons-list-title>
     <ons-list>
         <ons-list-item tappable ui-sref="home" >
             <div class="left">
@@ -17,7 +17,7 @@
               <ons-icon icon="fa-link"></ons-icon>
             </div>-->
         </ons-list-item>
-        <ons-list-item tappable ui-sref="rekap" >
+        <ons-list-item tappable ui-sref="rekap" ng-show="$root.$storage.SESSION_LOGIN[0].role=='ADMIN'" >
             <div class="left">
                 <ons-icon fixed-width class="list-item__icon" icon="fa-download, material:md-cloud-download"></ons-icon>
             </div>

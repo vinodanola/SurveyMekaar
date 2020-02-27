@@ -1,8 +1,8 @@
 
     <ons-splitter var="mySplitter" id="mySplitter">
-        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
             <ng-include src=" 'partials/sidemenu.html' "></ng-include>
-        </ons-splitter-side>
+        </ons-splitter-side>-->
         <ons-splitter-content>
             <ons-page>
                 <ons-toolbar>
@@ -87,14 +87,14 @@
                                                     <span>Kesulitan Biaya Berobat : </span>
                                                 </div>
                                                 <div class="right">
-                                                <select  ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT" class="select-input select-input--material" placeholder="jenis penyakit">
+                                                <select  ng-model="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT" class="select-input select-input--material" placeholder="jenis penyakit" ng-change="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=''; fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI='';">
                                                     <option value="YA">Ya</option>
                                                     <option value="TIDAK">Tidak</option>
                                                 </select>
                                                 </div>
                                             </ons-list-item>
                                         </ons-list>
-                                        <ons-list>
+                                        <ons-list ng-show="fdSV.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='YA'">
                                             <ons-list-item>
                                                 <div class="center">
                                                     <span>Cara mengatasi kesulitan : </span>

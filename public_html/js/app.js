@@ -175,7 +175,7 @@ App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locatio
 });
 
 
-App.run(['$sessionStorage','$location', '$rootScope', '$stateParams', '$state', '$window', '$http', 'apiData',  'apiBase',
+App.run(['$localStorage','$location', '$rootScope', '$stateParams', '$state', '$window', '$http', 'apiData',  'apiBase',
     function($localStorage, $location, $rootScope, $stateParams, $state, $window, $http, apiData , apiBase) {
         
         $rootScope.onDialog = 0;
@@ -220,6 +220,8 @@ App.run(['$sessionStorage','$location', '$rootScope', '$stateParams', '$state', 
         };
         
         $rootScope.API_BASE = apiBase;
+        
+        $rootScope.MY_MATH_RANDOM = Math.random();
     }
 ]);
 
@@ -449,15 +451,15 @@ App.controller('createsurveyCtrl',['$localStorage','$location', '$rootScope', '$
         }
         else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Biaya berobat'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Kesulitan biaya berobat'+vetd;
         }
-        else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='undefined')){
+        else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='YA' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='undefined')){
             $state.go('createsurvey.error');
             $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan'+vetd;
         }
-        else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='LAINNYA' && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=='undefined')){
+        else if (data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN=='PERNAH' && data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_KESULITAN_BIAYA_BEROBAT=='YA' && data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN=='LAINNYA'  && (data.hasOwnProperty('IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI')==false || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=='' || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI==null || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI==undefined || data.IDK_KESEHATAN_SAKIT_SELAMA_1_TAHUN_CARA_MENGATASI_KESULITAN_LAINNYA_DESKRIPSI=='undefined')){
             $state.go('createsurvey.error');
-            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan'+vetd;
+            $scope.fdSV.ERROR = 'Indikator Kesehatan -> 2. Apakah nasabah/anggota keluarga pernah mengalami sakit selama 1 tahun terakhir? -> Cara mengatasi kesulitan -> Jika Lainnya'+vetd;
         }
         else if (data.hasOwnProperty('IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN')==false || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='' || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN==null || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN==undefined || data.IDK_KESEHATAN_SEBELUM_BERGABUNG_MEMILIKI_JAMINAN_KESEHATAN=='undefined'){
             $state.go('createsurvey.error');
@@ -1027,6 +1029,7 @@ App.controller('nasabahsCtrl',function($rootScope,$scope,filterFilter,$http,apiB
         $scope.fdSV.NASABAH_ALAMAT = x.NASABAH_ALAMAT;
         $scope.fdSV.NASABAH_NAMA_KELOMPOK = x.NASABAH_NAMA_KELOMPOK;
         $scope.fdSV.NASABAH_HARI_PERTEMUAN = x.NASABAH_HARI_PERTEMUAN;
+        $scope.fdSV.NASABAH_SIKLUS = x.NASABAH_SIKLUS;
         $state.go('createsurvey.datanasabah');
     };
      

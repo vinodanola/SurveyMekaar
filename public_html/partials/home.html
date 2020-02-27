@@ -1,7 +1,7 @@
 <ui-view>
     <ons-splitter var="mySplitter" id="mySplitter">
         <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
-            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+            <ng-include src=" 'partials/sidemenu.html?UNIQID='+$root.MY_MATH_RANDOM "></ng-include>
         </ons-splitter-side>
         <ons-splitter-content>
             <ons-page>

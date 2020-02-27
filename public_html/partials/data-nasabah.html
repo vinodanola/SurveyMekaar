@@ -1,8 +1,8 @@
 <ui-view>
     <ons-splitter var="mySplitter" id="mySplitter">
-        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
             <ng-include src=" 'partials/sidemenu.html' "></ng-include>
-        </ons-splitter-side>
+        </ons-splitter-side>-->
         <ons-splitter-content>
             <ons-page>
                 <ons-toolbar>
@@ -47,6 +47,7 @@
                             {{fdSV.NASABAH_NAMA}}
                         </div>
                     </ons-list-item>
+                    
                 </ons-list>
                 <section style="padding: 8px" ng-show="fdSV.NASABAH_ID">
                     <div style=" padding: 1px 0 0 0;">
@@ -92,6 +93,22 @@
                                     </div>
                                     <div class="right">
                                         {{fdSV.NASABAH_HARI_PERTEMUAN}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        No. Rekening
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_NO_REKENING}}
+                                    </div>
+                                </ons-list-item>
+                                <ons-list-item>
+                                    <div class="center">
+                                        Siklus
+                                    </div>
+                                    <div class="right">
+                                        {{fdSV.NASABAH_SIKLUS}}
                                     </div>
                                 </ons-list-item>
                             </ons-list>
