@@ -3,8 +3,9 @@
         <div class="profile-pic" style="    background: #107ac2; border-color: #fff;">
             <img src="images/icon.png">
         </div>
+        
     </div>
-    <ons-list-title>Access {{$root.$storage.SESSION_LOGIN[0].role}}</ons-list-title>
+    <ons-list-title><b>{{$root.$storage.SESSION_LOGIN[0].nama}} ({{$root.$storage.SESSION_LOGIN[0].nik}})</b></ons-list-title>
     <ons-list>
         <ons-list-item tappable ui-sref="home" >
             <div class="left">
