@@ -244,7 +244,7 @@ App.run(['$localStorage','$location', '$rootScope', '$stateParams', '$state', '$
         $rootScope.onDialog = 0;
         
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-            
+
         });
             
         $rootScope.$on('$stateChangeSuccess', function (event, current, previous) {
@@ -1436,6 +1436,8 @@ App.controller('loginCtrl',function($scope,$rootScope,apiBase,$http,$state,$loca
                     SESSION_LOGIN : []
                 });
                 $rootScope.$storage.SESSION_LOGIN = [];
+                delete $rootScope.$storage.SESSION_LOGIN;
+                delete $localStorage.SESSION_LOGIN;
                 toastLoginFailed.toggle();
             }
             

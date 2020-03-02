@@ -132,7 +132,17 @@
                     <li class="list-item list-item--material" ng-show="fdUDN.APAKAH_PUNYA_HP=='PUNYA'">
                       <div class="list-item__center list-item--material__center">
                         <div class="list-item__title list-item--material__title">Tipe HP</div>
-                        <div><input type="text" ng-model="fdUDN.TIPE_HP" class="text-input" placeholder="Ketik" value=""></div>
+                        
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdUDN.TIPE_HP" value="ANDROID" class="checkbox__input" name="radioidkkstn2" >
+                                <div class="checkbox__checkmark"></div>
+                                Android
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdUDN.TIPE_HP" value="SELAIN_ANDROID"  class="checkbox__input" name="radioidkkstn2">
+                                <div class="checkbox__checkmark"></div>
+                                Selain Android
+                            </label>
                       </div>
                     </li>
                     <li class="list-item list-item--material" ng-show="fdUDN.APAKAH_PUNYA_HP=='PUNYA'">
