@@ -33,6 +33,14 @@
                               <p></p>
                               <ons-button modifier="large" ui-sref="updatedatanasabah">Periksa kembali</ons-button>
                           </div>
+                          <div class="card__content" ng-show="jenisFD=='PRAKK'">
+                              <p>{{fdPRAKK.ERROR}}</p>
+                              
+                              Silahkan tekan tombol di bawah dan periksa data anda kembali.
+                              Jika masih terjadi error silahkan hubungi Administrator.
+                              <p></p>
+                              <ons-button modifier="large" ui-sref="prakondisikantorcreatesurvey">Periksa kembali</ons-button>
+                          </div>
                         </div>
                     </div>
                 </section>

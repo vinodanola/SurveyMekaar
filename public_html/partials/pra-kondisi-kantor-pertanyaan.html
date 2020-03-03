@@ -1,0 +1,711 @@
+
+    <ons-splitter var="mySplitter" id="mySplitter">
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>-->
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                    <div class="left">
+                        <ons-toolbar-button ui-sref="prakondisikantorcreatesurvey">
+                            <ons-icon style="font-size:14px;vertical-align: bottom;" icon="ion-chevron-left, material:md-arrow-left"><span> Kategori</span></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+                <ul class="list list--material">
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">1. Sudah berapa lama anda menjadi karyawan PNM Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value="<1_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                <1 Tahun
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value="1_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                1 Tahun
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value="2_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                2 Tahun
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value="3_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                3 Tahun
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value="4_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                4 Tahun
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value="5_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                5 Tahun
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_1" value=">5_TAHUN" class="checkbox__input" name="radioprakkpt1">
+                                <div class="checkbox__checkmark"></div>
+                                >5 Tahun
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">2. Apakah pernah menginap di kantor Cabang PNM Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_2" value="PERNAH" class="checkbox__input" name="radioprakkpt2">
+                                <div class="checkbox__checkmark"></div>
+                                Pernah
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_2" value="TIDAK_PERNAH" class="checkbox__input" name="radioprakkpt2">
+                                <div class="checkbox__checkmark"></div>
+                                Tidak Pernah
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">3. Menurut Anda, bagaimana kondisi Ruang Kerja di Kantor Cabang PNM Mekaar saat ini dalam melakukan aktifitas kerja rutin?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_3" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt3">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_3" value="BURUK" class="checkbox__input" name="radioprakkpt3">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_3" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt3">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_3" value="BAIK" class="checkbox__input" name="radioprakkpt3">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_3" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt3">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">4. Menurut Anda, bagaimana kondisi tempat penyimpanan uang, penyimpanan dokumen dan penyimpanan asset lainnya milik PNM di Kantor Cabang PNM Mekaar saat ini?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_4" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt4">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_4" value="BURUK" class="checkbox__input" name="radioprakkpt4">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_4" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt4">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_4" value="BAIK" class="checkbox__input" name="radioprakkpt4">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_4" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt4">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">5. Menurut Anda, bagaimana kondisi peralatan kerja di Kantor Cabang PNM Mekaar saat ini? (Misalnya: Komputer, Internet, Printer, Scanner, dll)</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_5" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt5">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_5" value="BURUK" class="checkbox__input" name="radioprakkpt5">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_5" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt5">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_5" value="BAIK" class="checkbox__input" name="radioprakkpt5">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_5" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt5">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">6. Menurut Anda, bagaimana kondisi kesiapan Kendaraan Bermotor di Kantor Cabang PNM Mekaar saat ini untuk mendukung pelayanan maksimal kepada nasabah PNM Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_6" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt6">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_6" value="BURUK" class="checkbox__input" name="radioprakkpt6">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_6" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt6">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_6" value="BAIK" class="checkbox__input" name="radioprakkpt6">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_6" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt6">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">7. Menurut Anda, bagaimana kondisi Fasilitas Kamar Tidur di Kantor Cabang PNM Mekaar saat ini?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_7" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt7">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_7" value="BURUK" class="checkbox__input" name="radioprakkpt7">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_7" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt7">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_7" value="BAIK" class="checkbox__input" name="radioprakkpt7">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_7" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt7">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">8. Menurut Anda, bagaimana kondisi kebersian kamar mandi di Kantor Cabang PNM Mekaar saat ini?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_8" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt8">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_8" value="BURUK" class="checkbox__input" name="radioprakkpt8">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_8" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt8">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_8" value="BAIK" class="checkbox__input" name="radioprakkpt8">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_8" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt8">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">9. Menurut Anda, bagaimana kondisi ruang dapur di Kantor Cabang PNM Mekaar saat ini untuk melakukan kegiatan kreatifitas membuat makanan diluar aktifitas kerja?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_9" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt9">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_9" value="BURUK" class="checkbox__input" name="radioprakkpt9">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_9" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt9">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_9" value="BAIK" class="checkbox__input" name="radioprakkpt9">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_9" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt9">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">10. Menurut Anda, bagaimana kondisi Kantor Cabang PNM Mekaar saat ini apabila digunakan oleh karyawan untuk melakukan kreatifitas? (Misalnya: Latihan Menyayi, Latihan Menari, dll)</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_10" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt10">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_10" value="BURUK" class="checkbox__input" name="radioprakkpt10">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_10" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt10">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_10" value="BAIK" class="checkbox__input" name="radioprakkpt10">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_10" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt10">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">11. Menurut Anda, bagaimana hubungan antara karyawan Kantor Cabang Mekaar dengan lingkungan/tetangga sekitar pada saat ini?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_11" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt11">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_11" value="BURUK" class="checkbox__input" name="radioprakkpt11">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_11" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt11">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_11" value="BAIK" class="checkbox__input" name="radioprakkpt11">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_11" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt11">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">12. Menurut Anda, bagaimana kondisi Kantor Cabang PNM Mekaar saat ini apabila digunakan untuk menerima dan berkumpul dengan keluarga karyawan serta nasabah PNM Mekaar?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_12" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt12">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_12" value="BURUK" class="checkbox__input" name="radioprakkpt12">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_12" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt12">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_12" value="BAIK" class="checkbox__input" name="radioprakkpt12">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_12" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt12">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">13. Menurut Anda, bagaimana kepedulian antar karyawan Kantor Cabang PNM Mekaar dalam hal bergotong royong agar selalu terawat serta terjaga kebersihannya?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_13" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt13">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_13" value="BURUK" class="checkbox__input" name="radioprakkpt13">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_13" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt13">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_13" value="BAIK" class="checkbox__input" name="radioprakkpt13">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_13" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt13">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">14. Menurut Anda, bagaimana kondisi di Kantor Cabang PNM Mekaar dalam hal keamanan area kamar tidur untuk menyimpan barang-barang pribadi milik karyawan?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_14" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt14">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_14" value="BURUK" class="checkbox__input" name="radioprakkpt14">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_14" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt14">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_14" value="BAIK" class="checkbox__input" name="radioprakkpt14">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_14" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt14">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">15. Menurut Anda, bagaimana kepatuhan dan ketepatan waktu Kantor Cabang PNM Mekaar saat ini dalam hal memenuhi kewajibannya? (Misalnya: Membayar PBB, Listrik, Telepon, Keamanan, Kebersihan dan lainnya)</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_15" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt15">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_15" value="BURUK" class="checkbox__input" name="radioprakkpt15">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_15" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt15">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_15" value="BAIK" class="checkbox__input" name="radioprakkpt15">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_15" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt15">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">16. Menurut Anda, bagaimana kondisi Kantor Cabang PNM Mekaar saat ini apabila digunakan untuk kegiatan acara sosial lingkungan? (Misalnya: Khitanan Masal, PEngajian bersama dengan nasabah PNM Mekaar dan lainnya)</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_16" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt16">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_16" value="BURUK" class="checkbox__input" name="radioprakkpt16">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_16" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt16">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_16" value="BAIK" class="checkbox__input" name="radioprakkpt16">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_16" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt16">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">17. Menurut Anda, bagaimana kondisi Kantor Cabang PNM Mekaar untuk menerima tetangga dengan ramah yang berkunjung dan membantu apabila dibutuhkan?</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_17" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt17">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_17" value="BURUK" class="checkbox__input" name="radioprakkpt17">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_17" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt17">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_17" value="BAIK" class="checkbox__input" name="radioprakkpt17">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_17" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt17">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">18. Menurut Anda, bagaimana kondisi Kantor Cabang PNM Mekaar saat ini dalam hal kerapian dan kebersihan halaman sehingga nyaman untuk dilihat? </div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_18" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt18">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_18" value="BURUK" class="checkbox__input" name="radioprakkpt18">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_18" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt18">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_18" value="BAIK" class="checkbox__input" name="radioprakkpt18">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_18" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt18">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">19. Menurut Anda, bagaimana kondisi Kantor Cabang PNM Mekaar apabila sewaktu-waktu digunakan untuk klinik bisnis atau konsultasi bisnis nasabah? </div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_19" value="SANGAT_BURUK" class="checkbox__input" name="radioprakkpt19">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_19" value="BURUK" class="checkbox__input" name="radioprakkpt19">
+                                <div class="checkbox__checkmark"></div>
+                                Buruk
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_19" value="BIASA_SAJA" class="checkbox__input" name="radioprakkpt19">
+                                <div class="checkbox__checkmark"></div>
+                                Biasa Saja
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_19" value="BAIK" class="checkbox__input" name="radioprakkpt19">
+                                <div class="checkbox__checkmark"></div>
+                                Baik
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_19" value="SANGAT_BAIK" class="checkbox__input" name="radioprakkpt19">
+                                <div class="checkbox__checkmark"></div>
+                                Sangat Baik
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">20. Menurut Anda, apa yang paling penting untuk diperbaiki di Kantor Cabang PNM Mekaar saat ini? </div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="RUANG_MEETING" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Ruang Meeting
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="RUANG_KERJA_FAO" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Ruang Kerja FAO
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="KAMAR_TIDUR" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Kamar Tidur
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="DAPUR" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Dapur
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="KAMAR_MANDI" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Kamar Mandi
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="PERSEDIAAN_AIR" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Persediaan Air
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="TEMPAT_PARKIR" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Tempat Parkir
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.PERTANYAAN_20" value="KEAMANAN" class="checkbox__input" name="radioprakkpt20">
+                                <div class="checkbox__checkmark"></div>
+                                Keamanan
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">21. Apa keinginan anda untuk Kantor Cabang PNM Mekaar kedepannya? Jelaskan..</div>
+                        <div><br><textarea ng-model="fdPRAKK.PERTANYAAN_21" class="textarea textarea--transparent" placeholder="Ketik" style="min-width: 300px;border: 1px solid #f5f5f5;" value=""></textarea></div>
+                      </div>
+                    </li>
+                </ul>
+                <br>
+                <div style="padding: 5px; text-align:center; margin-bottom: 100px;">
+                    <button class="button--cta" ui-sref="prakondisikantorcreatesurvey.identitasresponden">
+                        <ons-icon icon="ion-chevron-left, material:md-arrow-left"></ons-icon>
+                        Sebelumnya
+                    </button>
+                    <button class="button--cta" ng-click="setPRAKK(fdPRAKK)">Simpan</button>
+                    <button class="button--cta" ng-click="batalPRAKK()">Batal</button>
+                </div>
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+
+

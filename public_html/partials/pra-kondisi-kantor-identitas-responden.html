@@ -1,0 +1,102 @@
+<ui-view>
+    <ons-splitter var="mySplitter" id="mySplitter">
+<!--        <ons-splitter-side id="sidemenu" swipeable side="right" collapse>
+            <ng-include src=" 'partials/sidemenu.html' "></ng-include>
+        </ons-splitter-side>-->
+        <ons-splitter-content>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="center">{{title}}</div>
+                    <div class="left">
+                        <ons-toolbar-button ui-sref="prakondisikantorcreatesurvey">
+                            <ons-icon style="font-size:14px;vertical-align: bottom;" icon="ion-chevron-left, material:md-arrow-left"><span> Kategori</span></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+                <ons-list>
+<!--                    <ons-list-header>Filter</ons-list-header>-->
+                    <ons-list-item modifier="chevron" tappable ui-sref="prakondisikantorcreatesurvey.identitasresponden.regions">
+                        <div class="center">
+                            Region
+                        </div>
+                        <div class="right">
+                            {{fdPRAKK.REGION_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="prakondisikantorcreatesurvey.identitasresponden.areas">
+                        <div class="center">
+                            Area
+                        </div>
+                        <div class="right">
+                            {{fdPRAKK.AREA_NAMA}}
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item modifier="chevron" tappable ui-sref="prakondisikantorcreatesurvey.identitasresponden.branchs">
+                        <div class="center">
+                            Branch
+                        </div>
+                        <div class="right">
+                            {{fdPRAKK.BRANCH_NAMA}}
+                        </div>
+                    </ons-list-item>
+                </ons-list>
+                <ul class="list list--material">
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Kab/Kota</div>
+                        <div><input type="text" ng-model="fdPRAKK.KAB_KOTA" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Provinsi</div>
+                        <div><input type="text" ng-model="fdPRAKK.PROVINSI" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Jabatan</div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.JABATAN" value="AO" class="checkbox__input" name="radioprakkir1">
+                                <div class="checkbox__checkmark"></div>
+                                AO
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.JABATAN" value="FAO" class="checkbox__input" name="radioprakkir1">
+                                <div class="checkbox__checkmark"></div>
+                                FAO
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.JABATAN" value="SAO" class="checkbox__input" name="radioprakkir1">
+                                <div class="checkbox__checkmark"></div>
+                                SAO
+                            </label>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdPRAKK.JABATAN" value="KC" class="checkbox__input" name="radioprakkir1">
+                                <div class="checkbox__checkmark"></div>
+                                KC
+                            </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Usia (Tahun)</div>
+                        <div><input type="number" ng-model="fdPRAKK.USIA" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                </ul>
+                <br>
+                <div style="padding: 5px; text-align:center; margin-bottom: 100px;">
+                    <button class="button--cta" ui-sref="prakondisikantorcreatesurvey.pertanyaan">
+                        Selanjutnya
+                        <ons-icon icon="ion-chevron-right, material:md-arrow-right"></ons-icon>
+                    </button>
+                </div>
+            </ons-page>
+        </ons-splitter-content>
+    </ons-splitter>
+</ui-view>
+
+
