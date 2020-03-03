@@ -1434,11 +1434,11 @@ App.controller('dashboardCtrl',function($rootScope,$scope,$http,apiBase,Authoriz
 
 App.controller('regionsCtrl',function($rootScope,$scope,$http,apiBase,Authorization,$state,gF){
     
-    $scope.getRegions = function(){
+    $scope.getRegions = function(type){
         gF.sL();
         $http({
             method      : "GET",
-            url         : apiBase + 'Region',
+            url         : apiBase + 'Region/?type='+type,
             dataType    : 'json', 
             headers     : { 
                 'Content-Type'  : 'application/json',
@@ -1452,7 +1452,14 @@ App.controller('regionsCtrl',function($rootScope,$scope,$http,apiBase,Authorizat
 
         }, function error(R) { console.log(R.statusText); gF.fL(); });
     };
-    $scope.getRegions();
+//    $scope.getRegions();
+    if ($scope.jenisFD==='UDN') {
+        $scope.getRegions('UDN');
+    } else if ($scope.jenisFD==='PRAKK') {
+        $scope.getRegions('PRAKK');
+    } else {
+        $scope.getRegions('SV');
+    }
     
     $scope.setRegion = function(x){
         
@@ -1516,11 +1523,11 @@ App.controller('regionsCtrl',function($rootScope,$scope,$http,apiBase,Authorizat
 
 App.controller('areasCtrl',function($rootScope,$scope,$http,apiBase,Authorization,$state,gF){
     
-    $scope.getAreas = function(region){
+    $scope.getAreas = function(region,type){
         gF.sL();
         $http({
             method      : "GET",
-            url         : apiBase + 'Area?region='+region,
+            url         : apiBase + 'Area?region='+region+'&type='+type,
             dataType    : 'json', 
             headers     : { 
                 'Content-Type'  : 'application/json',
@@ -1536,11 +1543,11 @@ App.controller('areasCtrl',function($rootScope,$scope,$http,apiBase,Authorizatio
     };
     
     if ($scope.jenisFD==='UDN') {
-        $scope.getAreas($scope.fdUDN.REGION_ID);
+        $scope.getAreas($scope.fdUDN.REGION_ID,'UDN');
     } else if ($scope.jenisFD==='PRAKK') {
-        $scope.getAreas($scope.fdPRAKK.REGION_ID);
+        $scope.getAreas($scope.fdPRAKK.REGION_ID,'PRAKK');
     } else {
-        $scope.getAreas($scope.fdSV.REGION_ID);
+        $scope.getAreas($scope.fdSV.REGION_ID,'SV');
     }
     
     $scope.setArea = function(x){
@@ -1598,11 +1605,11 @@ App.controller('areasCtrl',function($rootScope,$scope,$http,apiBase,Authorizatio
 
 App.controller('branchsCtrl',function($rootScope,$scope,filterFilter,$http,apiBase,Authorization,$state,gF){
     
-    $scope.getBranchs = function(region,area){
+    $scope.getBranchs = function(region,area,type){
         gF.sL();
         $http({
             method      : "GET",
-            url         : apiBase + 'Branch?region='+region+'&area='+area,
+            url         : apiBase + 'Branch?region='+region+'&area='+area+'&type='+type,
             dataType    : 'json', 
             headers     : { 
                 'Content-Type'  : 'application/json',
@@ -1617,11 +1624,11 @@ App.controller('branchsCtrl',function($rootScope,$scope,filterFilter,$http,apiBa
         }, function error(R) { console.log(R.statusText); gF.fL(); });
     };
     if ($scope.jenisFD==='UDN') {
-        $scope.getBranchs($scope.fdUDN.REGION_ID,$scope.fdUDN.AREA_ID);
+        $scope.getBranchs($scope.fdUDN.REGION_ID,$scope.fdUDN.AREA_ID,'UDN');
     } else if ($scope.jenisFD==='PRAKK') {
-        $scope.getBranchs($scope.fdPRAKK.REGION_ID,$scope.fdPRAKK.AREA_ID);
+        $scope.getBranchs($scope.fdPRAKK.REGION_ID,$scope.fdPRAKK.AREA_ID,'PRAKK');
     } else {
-        $scope.getBranchs($scope.fdSV.REGION_ID,$scope.fdSV.AREA_ID);
+        $scope.getBranchs($scope.fdSV.REGION_ID,$scope.fdSV.AREA_ID,'SV');
     }
     
     $scope.setBranch = function(x){
