@@ -1711,7 +1711,11 @@ App.controller('nasabahsCtrl',function($rootScope,$scope,filterFilter,$http,apiB
     
     $rootScope.$watch('searchNasabah', function(newValues, oldValues, scope) {
         if (newValues) {		
-            $scope.getNasabahs($scope.fdSV.BRANCH_ID,$rootScope.searchNasabah);
+            if ($scope.jenisFD==='UDN') {
+                $scope.getNasabahs($scope.fdUDN.BRANCH_ID,$rootScope.searchNasabah);
+            } else {
+                $scope.getNasabahs($scope.fdSV.BRANCH_ID,$rootScope.searchNasabah);
+            }
         }
     });
     
