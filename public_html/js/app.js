@@ -3,6 +3,7 @@ var App = angular.module('App', ['onsen' , 'ui.router' , 'ngStorage' , 'ngMask' 
 App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $provide, $base64 ) {
     
     $provide.value("apiBase", "http://10.61.3.37/api_SurveyMekaar/index.php/");
+    $provide.value("apiBaseWithoutIndex", "http://10.61.3.37/api_SurveyMekaar/");
     $provide.value("Authorization", "Basic dXNlcm5hbWU6cGFzc3dvcmQ=");
         
     $stateProvider
@@ -312,8 +313,8 @@ App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locatio
 });
 
 
-App.run(['$localStorage','$location', '$rootScope', '$stateParams', '$state', '$window', '$http', 'apiData',  'apiBase',
-    function($localStorage, $location, $rootScope, $stateParams, $state, $window, $http, apiData , apiBase) {
+App.run(['$localStorage','$location', '$rootScope', '$stateParams', '$state', '$window', '$http', 'apiData',  'apiBase', 'apiBaseWithoutIndex',
+    function($localStorage, $location, $rootScope, $stateParams, $state, $window, $http, apiData , apiBase, apiBaseWithoutIndex) {
         
         $rootScope.onDialog = 0;
         
@@ -357,6 +358,8 @@ App.run(['$localStorage','$location', '$rootScope', '$stateParams', '$state', '$
         };
         
         $rootScope.API_BASE = apiBase;
+        
+        $rootScope.API_BASE_WITHOUT_INDEX = apiBaseWithoutIndex;
         
         $rootScope.MY_MATH_RANDOM = Math.random();
     }
