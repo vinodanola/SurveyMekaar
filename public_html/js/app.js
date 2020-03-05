@@ -31,7 +31,7 @@ App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locatio
             templateUrl: 'partials/create-survey.html?UNIQID='+Math.random(),
             controller: 'createsurveyCtrl',
             data: {
-                pageTitle: 'Buat'
+                pageTitle: 'Kuesioner Keberhasilan Pembiayaan'
             }
         })
         
@@ -213,7 +213,7 @@ App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locatio
             templateUrl: 'partials/pra-kondisi-kantor-create-survey.html?UNIQID='+Math.random(),
             controller: 'prakondisikantorcreatesurveyCtrl',
             data: {
-                pageTitle: 'Buat'
+                pageTitle: 'Kuesioner Kondisi Kantor Cabang'
             }
         })
         
