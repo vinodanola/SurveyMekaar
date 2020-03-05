@@ -2,10 +2,10 @@ var App = angular.module('App', ['onsen' , 'ui.router' , 'ngStorage' , 'ngMask' 
 
 App.config( function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $provide, $base64 ) {
     
-//    $provide.value("apiBase", "http://10.61.3.37/api_SurveyMekaar/index.php/");
-//    $provide.value("apiBaseWithoutIndex", "http://10.61.3.37/api_SurveyMekaar/");
-    $provide.value("apiBase", "http://surveymekaar.yakinbisa.id/api_SurveyMekaar/index.php/");
-    $provide.value("apiBaseWithoutIndex", "http://surveymekaar.yakinbisa.id/api_SurveyMekaar/");
+    $provide.value("apiBase", "http://10.61.3.37/api_SurveyMekaar/index.php/");
+    $provide.value("apiBaseWithoutIndex", "http://10.61.3.37/api_SurveyMekaar/");
+//    $provide.value("apiBase", "http://surveymekaar.yakinbisa.id/api_SurveyMekaar/index.php/");
+//    $provide.value("apiBaseWithoutIndex", "http://surveymekaar.yakinbisa.id/api_SurveyMekaar/");
     $provide.value("Authorization", "Basic dXNlcm5hbWU6cGFzc3dvcmQ=");
         
     $stateProvider
