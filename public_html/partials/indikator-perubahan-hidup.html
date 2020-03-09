@@ -93,48 +93,48 @@
                           <div class="list-item__title list-item--material__title">7. Dimana nasabah biasanya menabung <b>sebelum</b> menerima pembiayaan Mekaar?</div>
                         <div>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="BANK" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_1" ng-true-value="'BANK'" class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Bank
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="KOPERASI_LEMBAGA_SEJENIS_MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_2" ng-true-value="'KOPERASI_LEMBAGA_SEJENIS_MEKAAR'" class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Koperasi/Lembaga sejenis Mekaar
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_3" ng-true-value="'MEKAAR'" class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Mekaar
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="DISIMPAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_4" ng-true-value="'DISIMPAN'"  class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Disimpan
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="ARISAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_5" ng-true-value="'ARISAN'"  class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Arisan
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="DIBELIKAN_TERNAK_AYAM_SAPI_DLL" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_6" ng-true-value="'DIBELIKAN_TERNAK_AYAM_SAPI_DLL'"  class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Dibelikan ternak (ayam, sapi dll)
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN" value="LAINNYA" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='';" class="checkbox__input" name="idkprbhhdp3">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_7" ng-true-value="'LAINNYA'" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_7!='LAINNYA' ? fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='' : '';" class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Lainnya
                             </label>
                             <br>
-                            <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN=='LAINNYA'"><input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
+                            <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_7=='LAINNYA'"><input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SEBELUM_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
 <!--                            <label class="checkbox">
                                 <input type="checkbox" class="checkbox__input" name="idkprbhhdp3">
                                 <div class="checkbox__checkmark"></div>
@@ -151,48 +151,48 @@
                         <div class="list-item__title list-item--material__title">8. Dimana nasabah biasanya menabung setelah menerima pembiayaan Mekaar?</div>
                         <div>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="BANK" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_1" ng-true-value="'BANK'" class="checkbox__input">
                                 <div class="checkbox__checkmark"></div>
                                 Bank
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="KOPERASI_LEMBAGA_SEJENIS_MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_2" ng-true-value="'KOPERASI_LEMBAGA_SEJENIS_MEKAAR'" class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Koperasi/Lembaga sejenis Mekaar
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="MEKAAR" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_3" ng-true-value="'MEKAAR'" class="checkbox__input" >
                                 <div class="checkbox__checkmark"></div>
                                 Mekaar
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="DISIMPAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_4" ng-true-value="'DISIMPAN'" class="checkbox__input">
                                 <div class="checkbox__checkmark"></div>
                                 Disimpan
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="ARISAN" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_5" ng-true-value="'ARISAN'" class="checkbox__input">
                                 <div class="checkbox__checkmark"></div>
                                 Arisan
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="DIBELIKAN_TERNAK_AYAM_SAPI_DLL" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_6" ng-true-value="'DIBELIKAN_TERNAK_AYAM_SAPI_DLL'" class="checkbox__input">
                                 <div class="checkbox__checkmark"></div>
                                 Dibelikan ternak (ayam, sapi dll)
                             </label>
                             <br>
                             <label class="checkbox">
-                                <input type="radio" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN" value="LAINNYA" ng-click="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="idkprbhhdp4">
+                                <input type="checkbox" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_7" ng-true-value="'LAINNYA'" ng-change="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_7!='LAINNYA' ? fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI='' : '';" class="checkbox__input">
                                 <div class="checkbox__checkmark"></div>
                                 Lainnya
                             </label>
                             <br>
-                            <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN=='LAINNYA'"><input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
+                            <div ng-show="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_7=='LAINNYA'"><input type="text" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_DIMANA_MENABUNG_SETELAH_MENERIMA_PEMBIAYAAN_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
 <!--                            <label class="checkbox">
                                 <input type="checkbox" class="checkbox__input" name="idkprbhhdp3">
                                 <div class="checkbox__checkmark"></div>
@@ -217,10 +217,10 @@
                                 <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TANAH_LADANG" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Tanah / Ladang
                             </div>
                             <br>
-                            <div>
+<!--                            <div>
                                 <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_TABUNGAN" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Tabungan
                             </div>
-                            <br>
+                            <br>-->
                             <div>
                                 <input type="number" ng-model="fdSV.IDK_PERUBAHAN_HIDUP_JUMLAH_PERUBAHAN_BARANG_DAN_ASET_SETELAH_MENERIMA_PEMBIAYAAN_HANDPHONE" class="text-input text-input--underbar" placeholder="Ketik jumlah" style="width:100px;" value=""> Handphone
                             </div>

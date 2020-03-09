@@ -119,6 +119,69 @@
                 <ul class="list list--material">
                     <li class="list-item list-item--material">
                       <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Jenis Usaha Utama</div>
+                        <div>
+                            <!--<input type="number" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" class="text-input" placeholder="Ketik" value="">-->
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="MEMBUAT_MAKANAN_ATAU_MINUMAN" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Membuat makanan/minuman
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="KREDIT_BARANG" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Kredit Barang
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="PENGRAJIN" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Pengrajin
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="PEDAGANG_ATAU_PENJUAL" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Pedagang/Penjual
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="PETANI_ATAU_BERKEBUN" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Petani/Berkebun
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="PETERNAK" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Peternak
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="NELAYAN" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Nelayan
+                            </label>
+                            <br>
+                            <label class="checkbox">
+                                <input type="radio" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA" value="LAINNYA" ng-click="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI=''" class="checkbox__input" name="nsbhjut1">
+                                <div class="checkbox__checkmark"></div>
+                                Lainnya
+                            </label>
+                            <br>
+                            <div ng-show="fdSV.NASABAH_JENIS_USAHA_UTAMA=='LAINNYA'"><input type="text" ng-model="fdSV.NASABAH_JENIS_USAHA_UTAMA_LAINNYA_DESKRIPSI" class="text-input" placeholder="Jika lainnya, sebutkan" value=""></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
+                        <div class="list-item__title list-item--material__title">Lama Usaha (bulan)</div>
+                        <div><input type="number" ng-model="fdSV.NASABAH_LAMA_USAHA" class="text-input" placeholder="Ketik" value=""></div>
+                      </div>
+                    </li>
+                    <li class="list-item list-item--material">
+                      <div class="list-item__center list-item--material__center">
                         <div class="list-item__title list-item--material__title">Umur (tahun)</div>
                         <div><input type="number" ng-model="fdSV.NASABAH_UMUR" class="text-input" placeholder="Ketik" value=""></div>
                       </div>
