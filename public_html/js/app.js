@@ -1119,6 +1119,10 @@ App.controller('updatedatanasabahCtrl',['$localStorage','$location', '$rootScope
             $state.go('updatedatanasabah.error');
             $scope.fdUDN.ERROR = 'Nomor HP'+vetd;
         }
+        else if (data.hasOwnProperty('NIK_NASABAH')==false || data.NIK_NASABAH=='' || data.NIK_NASABAH==null || data.NIK_NASABAH==undefined || data.NIK_NASABAH=='undefined'){
+            $state.go('updatedatanasabah.error');
+            $scope.fdUDN.ERROR = 'NIK Nasabah'+vetd;
+        }
         else {
             
             $scope.fdUDN.ERROR = '';
